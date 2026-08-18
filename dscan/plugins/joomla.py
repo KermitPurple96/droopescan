@@ -33,7 +33,16 @@ class Joomla(BasePlugin):
         ("administrator/", "Login page."),
         ("libraries/simplepie/README.txt", "SimplePie README."),
         ("LICENSE.txt", "License file."),
-        ("plugins/system/cache/cache.xml", "Version attribute contains approx version")
+        ("plugins/system/cache/cache.xml", "Version attribute contains approx version"),
+        ("README.txt", "Default readme file."),
+        ("htaccess.txt", "Default .htaccess not renamed/enabled - recommended hardening not applied."),
+        ("web.config.txt", "Default web.config not renamed/enabled - recommended hardening not applied."),
+        ("robots.txt.dist", "Default robots.txt not renamed - recommended hardening not applied."),
+        ("installation/", "Installer left in place - allows a full reinstall/takeover if reachable."),
+        ("configuration.php.bak", "Backup of configuration.php - may leak DB credentials."),
+        ("configuration.php~", "Editor backup of configuration.php - may leak DB credentials."),
+        ("configuration.php.old", "Backup of configuration.php - may leak DB credentials."),
+        ("configuration.php.save", "Backup of configuration.php - may leak DB credentials."),
     ]
 
     interesting_module_urls = [

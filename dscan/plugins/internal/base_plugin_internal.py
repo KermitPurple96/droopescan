@@ -822,6 +822,21 @@ class BasePluginInternal(controller.CementBaseController):
             p = ProgressBar(sys.stderr, len(interesting_urls),
                     "interesting")
 
+        # Some servers redirect every unmatched path to the same generic
+        # error/catch-all page, often with a 200 once requests follows the
+        # redirect. Calibrate against a URL we know doesn't exist so those
+        # don't get reported as real hits.
+        # HEAD requests don't follow redirects by default in the requests
+        # library (unlike every other verb), so force it here to get a
+        # trustworthy final URL to compare against regardless of --verb.
+        not_found_final_url = None
+        try:
+            baseline = requests_verb(url + self.not_found_url, timeout=timeout,
+                    headers=headers, allow_redirects=True)
+            not_found_final_url = baseline.url
+        except Exception:
+            pass
+
         found = []
         for path, description in interesting_urls:
 
@@ -830,11 +845,13 @@ class BasePluginInternal(controller.CementBaseController):
 
             interesting_url = url + path
             resp = requests_verb(interesting_url, timeout=timeout,
-                    headers=headers)
+                    headers=headers, allow_redirects=True)
+
+            is_catch_all = not_found_final_url and resp.url == not_found_final_url
 
             # 401/403 still confirm the path exists (and is guarded), which
             # is worth surfacing rather than silently discarding.
-            if resp.status_code in (200, 301, 401, 403):
+            if resp.status_code in (200, 301, 401, 403) and not is_catch_all:
                 note = ''
                 if resp.status_code in (401, 403):
                     note = ' [access restricted, HTTP %d]' % resp.status_code
