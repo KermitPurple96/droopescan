@@ -13,7 +13,9 @@ class Joomla(BasePlugin):
     module_common_file = ""
 
     update_majors = ['1.5','1.6','1.7', '2.5', '3.0', '3.1', '3.2', '3.3',
-            '3.4', '3.5', '3.6', '3.7', '3.8', '4.0']
+            '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '4.0', '4.1',
+            '4.2', '4.3', '4.4', '5.0', '5.1', '5.2', '5.3', '5.4', '6.0',
+            '6.1', '6.2']
 
     interesting_urls = [
         ("joomla.xml", "This CMS' default changelog."),
@@ -67,6 +69,13 @@ class Joomla(BasePlugin):
 
     def update_plugins(self):
         pass
+
+    def update_vulnerabilities(self):
+        """
+        @return: a list of known vulnerabilities, as returned by
+            ua.joomla_security_centre_get.
+        """
+        return ua.joomla_security_centre_get()
 
 def load(app=None):
     handler.register(Joomla)

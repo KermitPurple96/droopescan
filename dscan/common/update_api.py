@@ -19,10 +19,12 @@ import requests
 import subprocess
 
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 
 GH = 'https://github.com/'
 UW = './.update-workspace/'
 OSV_API = 'https://api.osv.dev/v1/query'
+JOOMLA_SECURITY_CENTRE = 'https://developer.joomla.org/security-centre.html'
 
 def github_tags_get(github_repo):
     """
@@ -168,6 +170,195 @@ def osv_vulnerabilities_get(package_name, ecosystem='Packagist'):
 
     merged.sort(key=lambda vuln: vuln['id'])
     return merged
+
+_JOOMLA_LINK_RE = re.compile(
+        r'/security-centre/(\d+)-(\d{8})-(core|framework)-[a-z0-9-]+\.html')
+_JOOMLA_VERSION_RE = r'\d+(?:\.\d+){1,3}(?:-[a-z]+\d*)?'
+_JOOMLA_RANGE_RE = re.compile(
+        r'(%s)\s*(?:-|through)\s*(%s)' % (_JOOMLA_VERSION_RE, _JOOMLA_VERSION_RE))
+_JOOMLA_SINGLE_BRANCH_RE = re.compile(
+        r'(%s)\s+and\s+all\s+(?:previous|earlier)' % _JOOMLA_VERSION_RE)
+
+def _joomla_links_get(page_html):
+    """
+    @param page_html: HTML of a security-centre.html listing page.
+    @return: a set of (id, date_code, href) tuples for 'core'/'framework'
+        advisories linked from that page.
+    """
+    bs = BeautifulSoup(page_html, 'lxml')
+    links = set()
+    for a in bs.select('a[href*="/security-centre/"]'):
+        match = _JOOMLA_LINK_RE.search(a.get('href', ''))
+        if match:
+            links.add((match.group(1), match.group(2), match.group(0)))
+
+    return links
+
+def _joomla_page_count(page_html):
+    bs = BeautifulSoup(page_html, 'lxml')
+    counter = bs.select_one('.com-content-category-blog__counter')
+    if not counter:
+        return 1
+
+    match = re.search(r'Page \d+ of (\d+)', counter.get_text(strip=True))
+    return int(match.group(1)) if match else 1
+
+def _joomla_fields_get(body):
+    fields = {}
+    for li in body.select('ul > li'):
+        strong = li.find('strong')
+        if not strong:
+            continue
+
+        label = strong.get_text(strip=True).rstrip(':')
+        fields[label] = li.get_text(strip=True)[len(strong.get_text(strip=True)):].strip()
+
+    return fields
+
+def _joomla_ranges_parse(versions_text, solution_text):
+    """
+    Parses the free-text 'Versions' (and, where needed, 'Solution') fields
+    used by Joomla's security advisories into a list of {'introduced',
+    'fixed'} dicts. The advisory template has changed over the years: modern
+    advisories use clean comma-separated 'X.Y.Z-A.B.C' ranges, while older
+    ones use prose such as '1.5.8 and all previous 1.5 releases'.
+    @param versions_text: contents of the 'Versions' field.
+    @param solution_text: contents of the 'Solution' field, used to recover
+        an exact fixed version when the affected range is a prose fallback.
+    @return: a list of {'introduced': str, 'fixed': str|None} dicts.
+    """
+    solution_versions = re.findall(_JOOMLA_VERSION_RE, solution_text or '')
+
+    ranges = []
+    for segment in versions_text.split(','):
+        segment = segment.strip()
+        if not segment:
+            continue
+
+        range_match = _JOOMLA_RANGE_RE.search(segment)
+        if range_match:
+            ranges.append([range_match.group(1), range_match.group(2)])
+            continue
+
+        branch_match = _JOOMLA_SINGLE_BRANCH_RE.search(segment)
+        if branch_match:
+            upper = branch_match.group(1)
+            branch = '.'.join(upper.split('.')[0:2])
+            ranges.append([branch + '.0', upper])
+            continue
+
+        single = re.findall(_JOOMLA_VERSION_RE, segment)
+        if single:
+            ranges.append([single[0], single[0]])
+
+    affected = []
+    for i, (introduced, upper) in enumerate(ranges):
+        fixed = solution_versions[i] if i < len(solution_versions) else None
+        if not fixed or not version_gt(fixed, introduced):
+            # No reliable exact fixed version could be recovered (older
+            # advisories don't always spell it out); fall back to treating
+            # the upper bound of the affected range as (approximately) the
+            # last vulnerable patch version.
+            parts = re.split(r'(\d+)$', upper, maxsplit=1)
+            if len(parts) == 3:
+                fixed = parts[0] + str(int(parts[1]) + 1) + parts[2]
+            else:
+                fixed = None
+
+        affected.append({'introduced': introduced, 'fixed': fixed})
+
+    return affected
+
+def _joomla_solution_get(body):
+    header = body.find('h3', string=re.compile(r'Solution'))
+    if not header:
+        return None
+
+    sibling = header.find_next_sibling()
+    return sibling.get_text(' ', strip=True) if sibling else None
+
+def _joomla_advisory_get(session, href):
+    resp = session.get('https://developer.joomla.org' + href, timeout=30)
+    resp.raise_for_status()
+
+    bs = BeautifulSoup(resp.text, 'lxml')
+    body = bs.select_one('.com-content-article__body')
+    if not body:
+        return None
+
+    fields = _joomla_fields_get(body)
+    versions_text = fields.get('Versions')
+    if not versions_text:
+        return None
+
+    affected = _joomla_ranges_parse(versions_text, _joomla_solution_get(body))
+    if not affected:
+        return None
+
+    title_el = bs.select_one('h2')
+    summary = title_el.get_text(strip=True) if title_el else href
+
+    cves = sorted(set(re.findall(r'CVE-\d{4}-\d+', fields.get('CVE Number', ''))))
+
+    return {
+        'summary': summary,
+        'cves': cves,
+        'url': 'https://developer.joomla.org' + href,
+        'affected': affected,
+    }
+
+def joomla_security_centre_get(threads=8):
+    """
+    Scrapes the Joomla! Security Strike Team's advisory list
+    (https://developer.joomla.org/security-centre.html) for all 'core' and
+    'framework' advisories, since Joomla core vulnerabilities are barely
+    represented in OSV.dev/GHSA (unlike Drupal, which has a dedicated feed).
+    @param threads: how many advisory pages to fetch concurrently.
+    @return: a list of dicts, each with keys 'id', 'summary', 'cves', 'url'
+        and 'affected' (list of {'introduced', 'fixed'}), matching the
+        format used by osv_vulnerabilities_get.
+    """
+    session = requests.Session()
+    first_page = session.get(JOOMLA_SECURITY_CENTRE, timeout=30)
+    first_page.raise_for_status()
+
+    page_count = _joomla_page_count(first_page.text)
+
+    links = _joomla_links_get(first_page.text)
+    for start in range(25, page_count * 25, 25):
+        page = session.get(JOOMLA_SECURITY_CENTRE, params={'start': start}, timeout=30)
+        page.raise_for_status()
+        links |= _joomla_links_get(page.text)
+
+    def fetch(link):
+        advisory_id, date_code, href = link
+        try:
+            advisory = _joomla_advisory_get(session, href)
+        except requests.RequestException:
+            return None
+
+        if not advisory:
+            return None
+
+        advisory['id'] = 'JSST-%s' % date_code
+        return advisory
+
+    with ThreadPoolExecutor(max_workers=threads) as executor:
+        results = list(executor.map(fetch, sorted(links)))
+
+    merged = {}
+    for advisory in results:
+        if not advisory:
+            continue
+
+        existing = merged.get(advisory['id'])
+        if existing:
+            existing['affected'].extend(advisory['affected'])
+            existing['cves'] = sorted(set(existing['cves']) | set(advisory['cves']))
+        else:
+            merged[advisory['id']] = advisory
+
+    return sorted(merged.values(), key=lambda vuln: vuln['id'])
 
 def github_tags_newer(github_repo, versions_file, update_majors):
     """

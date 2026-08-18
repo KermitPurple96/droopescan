@@ -1,0 +1,4302 @@
+{
+  "vulnerabilities": [
+    {
+      "affected": [
+        {
+          "fixed": "1.5.7",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20080901",
+      "summary": "[20080901] - Core - JRequest Variable Injection",
+      "url": "https://developer.joomla.org/security-centre/271-20080901-core-jrequest-variable-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.7",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20080902",
+      "summary": "[20080902] - Core - Random Number Generation Flaw",
+      "url": "https://developer.joomla.org/security-centre/272-20080902-core-random-number-generation-flaw.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.7",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20080903",
+      "summary": "[20080903] - Core - com_mailto Spam",
+      "url": "https://developer.joomla.org/security-centre/273-20080903-core-commailto-spam.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.7",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20080904",
+      "summary": "[20080904] - Core - Redirect Spam",
+      "url": "https://developer.joomla.org/security-centre/274-20080904-core-redirect-spam.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.8",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20081101",
+      "summary": "[20081101] - Core - com_content XSS vulnerability",
+      "url": "https://developer.joomla.org/security-centre/283-20081101-core-comcontent-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.8",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20081102",
+      "summary": "[20081102] - Core - com_weblinks XSS vulnerability",
+      "url": "https://developer.joomla.org/security-centre/284-20081102-core-comweblinks-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.9",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090101",
+      "summary": "[20090101] - Core - JSession SSL Session Disclosure",
+      "url": "https://developer.joomla.org/security-centre/287-20090101-core-jsession-ssl-session-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.9",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090102",
+      "summary": "[20090102] - Core - plg_xstandard Directory Traversal",
+      "url": "https://developer.joomla.org/security-centre/288-20090102-core-plgxstandard-directory-traversal.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.10",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090301",
+      "summary": "[20090301] - Core - Multiple XSS/CSRF",
+      "url": "https://developer.joomla.org/security-centre/293-20090301-core-multiple-xsscsrf.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.10",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090302",
+      "summary": "[20090302] - Core - com_content XSS",
+      "url": "https://developer.joomla.org/security-centre/294-20090302-core-comcontent-xss.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.11",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090601",
+      "summary": "[20090601] - Core - com_users XSS",
+      "url": "https://developer.joomla.org/security-centre/295-20090601-core-comusers-xss.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.11",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "1.5.11",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090602",
+      "summary": "[20090602] - Core - ja_purity XSS",
+      "url": "https://developer.joomla.org/security-centre/296-20090602-core-japurity-xss.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.12",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090604",
+      "summary": "[20090604] - Core - Frontend XSS - HTTP_REFERER not properly filtered",
+      "url": "https://developer.joomla.org/security-centre/298-20090604-core-frontend-xss-httpreferer-not-properly-filtered.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.12",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090605",
+      "summary": "[20090605] - Core - Frontend XSS - PHP_SELF not properly filtered",
+      "url": "https://developer.joomla.org/security-centre/299-20090605-core-frontend-xss-phpself-not-properly-filtered.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.12",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090606",
+      "summary": "[20090606] - Core - Missing JEXEC Check",
+      "url": "https://developer.joomla.org/security-centre/300-20090606-core-missing-jexec-check.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.13",
+          "introduced": "1.5.12"
+        },
+        {
+          "fixed": "1.5.13",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090722",
+      "summary": "[20090722] - Core - File Upload",
+      "url": "https://developer.joomla.org/security-centre/301-20090722-core-file-upload.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.14",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20090723",
+      "summary": "[20090723] - Core - com_mailto Timeout Issue",
+      "url": "https://developer.joomla.org/security-centre/303-20090723-core-com-mailto-timeout-issue.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.15",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "1.5.15",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20091103",
+      "summary": "[20091103] - Core - Front-End Editor Issue",
+      "url": "https://developer.joomla.org/security-centre/305-20091103-core-front-end-editor-issue.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.16",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "1.5.16",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "1.5.16",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "1.5.16",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20100423",
+      "summary": "[20100423] - Core - Password Reset Tokens",
+      "url": "https://developer.joomla.org/security-centre/308-20100423-core-password-reset-tokens.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.1",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20110901",
+      "summary": "[20110901] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/367-20110901-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.1",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20110902",
+      "summary": "[20110902] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/368-20110902-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.1",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20110903",
+      "summary": "[20110903] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/369-20110903-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.2",
+          "introduced": "1.7.1"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111001",
+      "summary": "[20111001] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/370-20111001-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.2",
+          "introduced": "1.7.1"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111002",
+      "summary": "[20111002] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/371-20111002-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.24",
+          "introduced": "1.5.23"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111003",
+      "summary": "[20111003] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/372-20111003-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.3",
+          "introduced": "1.7.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111101",
+      "summary": "[20111101] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/373-20111101-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.3",
+          "introduced": "1.7.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111102",
+      "summary": "[20111102] - Core - Password Change",
+      "url": "https://developer.joomla.org/security-centre/374-20111102-core-password-change.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.25",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20111103",
+      "summary": "[20111103] - Core - Password Change",
+      "url": "https://developer.joomla.org/security-centre/375-20111103-core-password-change.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.4",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120101",
+      "summary": "[20120101] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/382-20120101-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.4",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120102",
+      "summary": "[20120102] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/383-20120102-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.4",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120103",
+      "summary": "[20120103] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/384-20120103-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.4",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120104",
+      "summary": "[20120104] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/385-20120104-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.7.5",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120201",
+      "summary": "[20120201] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/387-20120201-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.1",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120202",
+      "summary": "[20120202] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/388-20120202-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.1",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120203",
+      "summary": "[20120203] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/389-20120203-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.2",
+          "introduced": "2.5.1"
+        },
+        {
+          "fixed": "1.7.6",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120301",
+      "summary": "[20120301] - Core - SQL Injection",
+      "url": "https://developer.joomla.org/security-centre/391-20120301-core-sql-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.2",
+          "introduced": "2.5.1"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120302",
+      "summary": "[20120302] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/392-20120302-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.3",
+          "introduced": "2.5.2"
+        },
+        {
+          "fixed": "2.5.2",
+          "introduced": "2.5.1"
+        },
+        {
+          "fixed": "2.5.1",
+          "introduced": "2.5.0"
+        },
+        {
+          "fixed": "1.8",
+          "introduced": "1.7"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120303",
+      "summary": "[20120303] - Core - Privilege Escalation",
+      "url": "https://developer.joomla.org/security-centre/395-20120303-core-privilege-escalation.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.3",
+          "introduced": "2.5.2"
+        },
+        {
+          "fixed": "2.5.2",
+          "introduced": "2.5.1"
+        },
+        {
+          "fixed": "2.5.1",
+          "introduced": "2.5.0"
+        },
+        {
+          "fixed": "1.8",
+          "introduced": "1.7"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120304",
+      "summary": "[20120304] - Core - Password Change",
+      "url": "https://developer.joomla.org/security-centre/394-20120304-core-password-change.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.26",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120305",
+      "summary": "[20120305] - Core - Password Change",
+      "url": "https://developer.joomla.org/security-centre/396-20120305-core-password-change.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "1.5.26",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120306",
+      "summary": "[20120306] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/397-20120306-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.4",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120307",
+      "summary": "[20120307] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/398-20120307-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.4",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120308",
+      "summary": "[20120308] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/399-20120308-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.5",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120601",
+      "summary": "[20120601] - Core - Privilege Escalation",
+      "url": "https://developer.joomla.org/security-centre/470-20120601-core-privilege-escalation.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.5",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120602",
+      "summary": "[20120602] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/471-20120602-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.7",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120901",
+      "summary": "[20120901] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/539-20120901-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.7",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20120902",
+      "summary": "[20120902] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/540-20120902-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.0.1",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20121001",
+      "summary": "[20121001] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/541-20121001-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.0.2",
+          "introduced": "3.0.1"
+        }
+      ],
+      "cves": [
+        "CVE-2012-5827"
+      ],
+      "id": "JSST-20121101",
+      "summary": "[20121101] - Core - Clickjacking",
+      "url": "https://developer.joomla.org/security-centre/543-20121101-core-clickjacking.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.8",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2012-5827"
+      ],
+      "id": "JSST-20121102",
+      "summary": "[20121102] - Core - Clickjacking",
+      "url": "https://developer.joomla.org/security-centre/544-20121102-core-clickjacking.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.0.3",
+          "introduced": "3.0.2"
+        }
+      ],
+      "cves": [
+        "CVE-2013-1453"
+      ],
+      "id": "JSST-20130201",
+      "summary": "[20130201] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/548-20130201-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.0.3",
+          "introduced": "3.0.2"
+        }
+      ],
+      "cves": [
+        "CVE-2013-1455"
+      ],
+      "id": "JSST-20130202",
+      "summary": "[20130202] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/549-20130202-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.0.3",
+          "introduced": "3.0.2"
+        }
+      ],
+      "cves": [
+        "CVE-2013-1454"
+      ],
+      "id": "JSST-20130203",
+      "summary": "[20130203] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/550-20130203-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.2.3",
+          "introduced": "3.1.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20140301",
+      "summary": "[20140301] - Core - SQL Injection",
+      "url": "https://developer.joomla.org/security-centre/578-20140301-core-sql-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.2.3",
+          "introduced": "3.1.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20140302",
+      "summary": "[20140302] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/579-20140302-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.19",
+          "introduced": "2.5.18"
+        },
+        {
+          "fixed": "3.2.3",
+          "introduced": "3.2.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20140303",
+      "summary": "[20140303] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/580-20140303-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.19",
+          "introduced": "2.5.18"
+        },
+        {
+          "fixed": "3.2.3",
+          "introduced": "3.2.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20140304",
+      "summary": "[20140304] - Core - Unauthorised Logins",
+      "url": "https://developer.joomla.org/security-centre/581-20140304-core-unauthorised-logins.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.2.5",
+          "introduced": "3.2.0"
+        },
+        {
+          "fixed": "3.3.4",
+          "introduced": "3.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2014-6631"
+      ],
+      "id": "JSST-20140901",
+      "summary": "[20140901] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/593-20140901-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.25",
+          "introduced": "2.5.24"
+        },
+        {
+          "fixed": "3.2.5",
+          "introduced": "3.2.4"
+        },
+        {
+          "fixed": "3.3.4",
+          "introduced": "3.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2014-6632"
+      ],
+      "id": "JSST-20140902",
+      "summary": "[20140902] - Core - Unauthorised Logins",
+      "url": "https://developer.joomla.org/security-centre/594-20140902-core-unauthorised-logins.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.26",
+          "introduced": "2.5.4"
+        },
+        {
+          "fixed": "3.2.6",
+          "introduced": "3.2.5"
+        },
+        {
+          "fixed": "3.3.5",
+          "introduced": "3.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2014-7228"
+      ],
+      "id": "JSST-20140903",
+      "summary": "[20140903] - Core - Remote File Inclusion",
+      "url": "https://developer.joomla.org/security-centre/595-20140903-core-remote-file-inclusion.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.5.26",
+          "introduced": "2.5.4"
+        },
+        {
+          "fixed": "3.2.6",
+          "introduced": "3.2.5"
+        },
+        {
+          "fixed": "3.3.5",
+          "introduced": "3.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2014-7229"
+      ],
+      "id": "JSST-20140904",
+      "summary": "[20140904] - Core - Denial of Service",
+      "url": "https://developer.joomla.org/security-centre/596-20140904-core-denial-of-service.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.2",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-5608"
+      ],
+      "id": "JSST-20150601",
+      "summary": "[20150601] - Core - Open Redirect",
+      "url": "https://developer.joomla.org/security-centre/617-20150601-core-open-redirect.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.2",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-5397"
+      ],
+      "id": "JSST-20150602",
+      "summary": "[20150602] - Core - CSRF Protection",
+      "url": "https://developer.joomla.org/security-centre/618-20150602-core-remote-code-execution.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.4",
+          "introduced": "3.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-6939"
+      ],
+      "id": "JSST-20150908",
+      "summary": "[20150908] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/626-20150908-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.5",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20151001",
+      "summary": "[20151001] - Core - SQL Injection",
+      "url": "https://developer.joomla.org/security-centre/628-20151001-core-sql-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.5",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-7859"
+      ],
+      "id": "JSST-20151002",
+      "summary": "[20151002] - Core - ACL Violations",
+      "url": "https://developer.joomla.org/security-centre/629-20151002-core-acl-violations.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.7",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20151206",
+      "summary": "[20151206] - Core - Session Hardening",
+      "url": "https://developer.joomla.org/security-centre/639-20151206-core-session-hardening.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.7",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20151207",
+      "summary": "[20151207] - Core - SQL Injection",
+      "url": "https://developer.joomla.org/security-centre/640-20151207-core-sql-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.4.6",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "3.4.6",
+          "introduced": "3.2.0"
+        },
+        {
+          "fixed": "3.4.6",
+          "introduced": "3.4.0"
+        },
+        {
+          "fixed": "3.4.6",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-8563",
+        "CVE-2015-8564",
+        "CVE-2015-8565"
+      ],
+      "id": "JSST-20151214",
+      "summary": "[20151201] - Core -  Remote Code Execution Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/630-20151214-core-remote-code-execution-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.1",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20160801",
+      "summary": "[20160801] - Core - ACL Violation",
+      "url": "https://developer.joomla.org/security-centre/652-20160801-core-core-acl-violations.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.1",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20160802",
+      "summary": "[20160802] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/653-20160802-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.1",
+          "introduced": "3.6.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20160803",
+      "summary": "[20160803] - Core - CSRF",
+      "url": "https://developer.joomla.org/security-centre/654-20160803-core-csrf.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.4",
+          "introduced": "3.4.4"
+        }
+      ],
+      "cves": [
+        "CVE-2016-8870"
+      ],
+      "id": "JSST-20161001",
+      "summary": "[20161001] - Core - Account Creation",
+      "url": "https://developer.joomla.org/security-centre/659-20161001-core-account-creation.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.4",
+          "introduced": "3.4.4"
+        }
+      ],
+      "cves": [
+        "CVE-2016-8869"
+      ],
+      "id": "JSST-20161002",
+      "summary": "[20161002] - Core - Elevated Privileges",
+      "url": "https://developer.joomla.org/security-centre/660-20161002-core-elevated-privileges.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.4",
+          "introduced": "3.4.4"
+        }
+      ],
+      "cves": [
+        "CVE-2016-9081"
+      ],
+      "id": "JSST-20161003",
+      "summary": "[20161003] - Core - Account Modifications",
+      "url": "https://developer.joomla.org/security-centre/661-20161003-core-account-modifications.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.5",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-9838"
+      ],
+      "id": "JSST-20161201",
+      "summary": "[20161201] - Core - Elevated Privileges",
+      "url": "https://developer.joomla.org/security-centre/664-20161201-core-elevated-privileges.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.5",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-9836"
+      ],
+      "id": "JSST-20161202",
+      "summary": "[20161202] - Core - Shell Upload",
+      "url": "https://developer.joomla.org/security-centre/665-20161202-core-shell-upload.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.6.5",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-9837"
+      ],
+      "id": "JSST-20161203",
+      "summary": "[20161203] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/666-20161203-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7983"
+      ],
+      "id": "JSST-20170401",
+      "summary": "[20170401] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/683-20170401-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7984"
+      ],
+      "id": "JSST-20170402",
+      "summary": "[20170402] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/684-20170402-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7985"
+      ],
+      "id": "JSST-20170403",
+      "summary": "[20170403] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/685-20170403-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7986"
+      ],
+      "id": "JSST-20170404",
+      "summary": "[20170404] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/686-20170404-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7987"
+      ],
+      "id": "JSST-20170405",
+      "summary": "[20170405] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/687-20170405-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7988"
+      ],
+      "id": "JSST-20170406",
+      "summary": "[20170406] - Core - ACL Violations",
+      "url": "https://developer.joomla.org/security-centre/688-20170406-core-acl-violations.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7989"
+      ],
+      "id": "JSST-20170407",
+      "summary": "[20170407] - Core - ACL Violations",
+      "url": "https://developer.joomla.org/security-centre/689-20170407-core-acl-violations.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.0",
+          "introduced": "3.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-8057"
+      ],
+      "id": "JSST-20170408",
+      "summary": "[20170408] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/690-20170408-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.1",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-8917"
+      ],
+      "id": "JSST-20170501",
+      "summary": "[20170501] - Core - SQL Injection",
+      "url": "https://developer.joomla.org/security-centre/692-20170501-core-sql-injection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.3",
+          "introduced": "1.7.3"
+        }
+      ],
+      "cves": [
+        "CVE-2017-9933"
+      ],
+      "id": "JSST-20170601",
+      "summary": "[20170701] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/696-20170601-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.3",
+          "introduced": "1.7.3"
+        }
+      ],
+      "cves": [
+        "CVE-2017-9934"
+      ],
+      "id": "JSST-20170602",
+      "summary": "[20170702] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/697-20170602-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.3",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-7985"
+      ],
+      "id": "JSST-20170603",
+      "summary": "[20170703] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/698-20170603-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.4",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-11612"
+      ],
+      "id": "JSST-20170605",
+      "summary": "[20170705] - Core - XSS Vulnerability",
+      "url": "https://developer.joomla.org/security-centre/701-20170605-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.7.4",
+          "introduced": "1.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-11364"
+      ],
+      "id": "JSST-20170704",
+      "summary": "[20170704] - Core - Installer: Lack of Ownership Verification",
+      "url": "https://developer.joomla.org/security-centre/700-20170704-core-installer-lack-of-ownership-verification.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.0",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-14595"
+      ],
+      "id": "JSST-20170901",
+      "summary": "[20170901] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/710-20170901-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.0",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-14596"
+      ],
+      "id": "JSST-20170902",
+      "summary": "[20170902] - Core - LDAP Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/711-20170902-core-ldap-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.2",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-14596"
+      ],
+      "id": "JSST-20171101",
+      "summary": "[20171101] - Core - LDAP Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/714-20171101-core-ldap-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.2",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-16634"
+      ],
+      "id": "JSST-20171102",
+      "summary": "[20171102] - Core - 2-factor-authentication bypass",
+      "url": "https://developer.joomla.org/security-centre/713-20171102-core-2-factor-authentication-bypass.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.2",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-16633"
+      ],
+      "id": "JSST-20171103",
+      "summary": "[20171103] - Core - Information Disclosure",
+      "url": "https://developer.joomla.org/security-centre/715-20171103-core-information-disclosure.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.4",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-6380"
+      ],
+      "id": "JSST-20180101",
+      "summary": "[20180101] - Core - XSS vulnerability in module chromes",
+      "url": "https://developer.joomla.org/security-centre/718-20180101-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.4",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-6377"
+      ],
+      "id": "JSST-20180102",
+      "summary": "[20180102] - Core - XSS vulnerability in com_fields",
+      "url": "https://developer.joomla.org/security-centre/720-20180102-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.4",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-6379"
+      ],
+      "id": "JSST-20180103",
+      "summary": "[20180103] - Core - XSS vulnerability in Uri class",
+      "url": "https://developer.joomla.org/security-centre/721-20180103-core-xss-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.4",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-6376"
+      ],
+      "id": "JSST-20180104",
+      "summary": "[20180104] - Core - SQLi vulnerability in Hathor postinstall message",
+      "url": "https://developer.joomla.org/security-centre/722-20180104-core-sqli-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.6",
+          "introduced": "3.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180301",
+      "summary": "[20180301] - Core - SQLi vulnerability User Notes",
+      "url": "https://developer.joomla.org/security-centre/723-20180301-core-sqli-vulnerability.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180501",
+      "summary": "[20180501] - Core - ACL violation in access levels",
+      "url": "https://developer.joomla.org/security-centre/729-20180501-core-acl-violation-in-access-levels.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180502",
+      "summary": "[20180502] - Core - Add PHAR files to the upload blacklist",
+      "url": "https://developer.joomla.org/security-centre/730-20180502-core-add-phar-files-to-the-upload-blacklist.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.1.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180503",
+      "summary": "[20180503] - Core - Information Disclosure about unpublished tags",
+      "url": "https://developer.joomla.org/security-centre/731-20180503-core-information-disclosure-about-unpublished-tags.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180504",
+      "summary": "[20180504] - Core - Installer leaks plain text password to local user",
+      "url": "https://developer.joomla.org/security-centre/732-20180504-core-installer-leaks-plain-text-password-to-local-user.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180505",
+      "summary": "[20180505] - Core - XSS Vulnerabilities & additional hardening",
+      "url": "https://developer.joomla.org/security-centre/733-20180505-core-xss-vulnerabilities-additional-hardening.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180506",
+      "summary": "[20180506] - Core - Filter field in com_fields allows remote code execution",
+      "url": "https://developer.joomla.org/security-centre/734-20180506-core-filter-field-in-com-fields-allows-remote-code-execution.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180507",
+      "summary": "[20180507] - Core - Session deletion race condition",
+      "url": "https://developer.joomla.org/security-centre/735-20180507-core-session-deletion-race-condition.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "3.1.2"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20180508",
+      "summary": "[20180508] - Core - Possible XSS attack in the redirect method",
+      "url": "https://developer.joomla.org/security-centre/736-20180508-core-possible-xss-attack-in-the-redirect-method.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.8",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-6378"
+      ],
+      "id": "JSST-20180509",
+      "summary": "[20180509] - Core - XSS vulnerability in the media manager",
+      "url": "https://developer.joomla.org/security-centre/737-20180509-core-xss-vulnerability-in-the-media-manager.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.9",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-12712"
+      ],
+      "id": "JSST-20180601",
+      "summary": "[20180601] - Core - Local File Inclusion with PHP 5.3",
+      "url": "https://developer.joomla.org/security-centre/741-20180601-core-local-file-inclusion-with-php-5-3.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.9",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-12711"
+      ],
+      "id": "JSST-20180602",
+      "summary": "[20180602] - Core - XSS vulnerability in language switcher module",
+      "url": "https://developer.joomla.org/security-centre/740-20180602-core-xss-vulnerability-in-language-switcher-module.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.12",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-15882"
+      ],
+      "id": "JSST-20180801",
+      "summary": "[20180801] - Core - Hardening the InputFilter for PHAR stubs",
+      "url": "https://developer.joomla.org/security-centre/743-20180801-core-hardening-the-inputfilter-for-phar-stubs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.12",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-15880"
+      ],
+      "id": "JSST-20180802",
+      "summary": "[20180802] - Core - Stored XSS vulnerability in the frontend profile",
+      "url": "https://developer.joomla.org/security-centre/744-20180802-core-stored-xss-vulnerability-in-the-frontend-profile.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.12",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-15881"
+      ],
+      "id": "JSST-20180803",
+      "summary": "[20180803] - Core - ACL Violation in custom fields",
+      "url": "https://developer.joomla.org/security-centre/745-20180803-core-acl-violation-in-custom-fields.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.13",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-17859"
+      ],
+      "id": "JSST-20181001",
+      "summary": "[20181001] - Core - Hardening com_contact contact form",
+      "url": "https://developer.joomla.org/security-centre/751-20181001-core-hardening-com-contact-contact-form.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.13",
+          "introduced": "2.5.4"
+        }
+      ],
+      "cves": [
+        "CVE-2018-17856"
+      ],
+      "id": "JSST-20181002",
+      "summary": "[20181002] - Core - Inadequate default access level for com_joomlaupdate",
+      "url": "https://developer.joomla.org/security-centre/752-20181002-core-inadequate-default-access-level-for-com-joomlaupdate.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.13",
+          "introduced": "3.1.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-17857"
+      ],
+      "id": "JSST-20181003",
+      "summary": "[20181003] - Core - Access level Violation in com_tags",
+      "url": "https://developer.joomla.org/security-centre/753-20181003-core-access-level-violation-in-com-tags.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.13",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-17855"
+      ],
+      "id": "JSST-20181004",
+      "summary": "[20181004] - Core - ACL Violation in com_users for the admin verification",
+      "url": "https://developer.joomla.org/security-centre/754-20181004-core-acl-violation-in-com-users-for-the-admin-verification.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.8.13",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-17858"
+      ],
+      "id": "JSST-20181005",
+      "summary": "[20181005] - Core - CSRF hardening in com_installer",
+      "url": "https://developer.joomla.org/security-centre/755-20181005-core-csrf-hardening-in-com-installer.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.2",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6264"
+      ],
+      "id": "JSST-20190101",
+      "summary": "[20190101] - Core - Stored XSS in mod_banners",
+      "url": "https://developer.joomla.org/security-centre/760-20190101-core-stored-xss-in-mod-banners.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.2",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6261"
+      ],
+      "id": "JSST-20190102",
+      "summary": "[20190102] - Core - Stored XSS in com_contact",
+      "url": "https://developer.joomla.org/security-centre/761-20190102-core-stored-xss-in-com-contact.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.2",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6263"
+      ],
+      "id": "JSST-20190103",
+      "summary": "[20190103] - Core - Stored XSS issue in the Global Configuration textfilter settings",
+      "url": "https://developer.joomla.org/security-centre/762-20190103-core-stored-xss-issue-in-the-global-configuration-textfilter-settings.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.2",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6262"
+      ],
+      "id": "JSST-20190104",
+      "summary": "[20190104] - Core - Stored XSS issue in the Global Configuration help url",
+      "url": "https://developer.joomla.org/security-centre/763-20190104-core-stored-xss-issue-in-the-global-configuration-help-url.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7744"
+      ],
+      "id": "JSST-20190201",
+      "summary": "[20190201] - Core - Lack of URL filtering in various core components",
+      "url": "https://developer.joomla.org/security-centre/765-20190201-core-lack-of-url-filtering-in-various-core-components.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "1.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7742"
+      ],
+      "id": "JSST-20190202",
+      "summary": "[20190202] - Core - Browserside mime-type sniffing causes XSS attack vectors",
+      "url": "https://developer.joomla.org/security-centre/766-20190202-core-browserside-mime-type-sniffing-causes-xss-attack-vectors.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7739"
+      ],
+      "id": "JSST-20190203",
+      "summary": "[20190203] - Core - Additional warning in the Global Configuration textfilter settings",
+      "url": "https://developer.joomla.org/security-centre/767-20190203-core-additional-warning-in-the-global-configuration-textfilter-settings.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7741"
+      ],
+      "id": "JSST-20190204",
+      "summary": "[20190204] - Core - Stored XSS issue in the Global Configuration help url #2",
+      "url": "https://developer.joomla.org/security-centre/768-20190204-core-stored-xss-issue-in-the-global-configuration-help-url-2.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7740"
+      ],
+      "id": "JSST-20190205",
+      "summary": "[20190205] - Core - XSS Issue in core.js writeDynaList",
+      "url": "https://developer.joomla.org/security-centre/769-20190205-core-xss-issue-in-core-js-writedynalist.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.3",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-7743"
+      ],
+      "id": "JSST-20190206",
+      "summary": "[20190206] - Core - Implement the TYPO3 PHAR stream wrapper",
+      "url": "https://developer.joomla.org/security-centre/770-20190206-core-implement-the-typo3-phar-stream-wrapper.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.4",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-9712"
+      ],
+      "id": "JSST-20190301",
+      "summary": "[20190301] - Core - XSS in com_config JSON handler",
+      "url": "https://developer.joomla.org/security-centre/772-20190301-core-xss-in-com-config-json-handler.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.4",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-9711"
+      ],
+      "id": "JSST-20190302",
+      "summary": "[20190302] - Core - XSS in item_title layout",
+      "url": "https://developer.joomla.org/security-centre/773-20190302-core-xss-in-item-title-layout.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.4",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-9714"
+      ],
+      "id": "JSST-20190303",
+      "summary": "[20190303] - Core - XSS in media form field",
+      "url": "https://developer.joomla.org/security-centre/774-20190303-core-xss-in-media-form-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.4",
+          "introduced": "3.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-9713"
+      ],
+      "id": "JSST-20190304",
+      "summary": "[20190304] - Core - Missing ACL check in sample data plugins",
+      "url": "https://developer.joomla.org/security-centre/775-20190304-core-missing-acl-check-in-sample-data-plugins.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.5",
+          "introduced": "1.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-10945"
+      ],
+      "id": "JSST-20190401",
+      "summary": "[20190401] - Core - Directory Traversal in com_media",
+      "url": "https://developer.joomla.org/security-centre/777-20190401-core-directory-traversal-in-com-media.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.5",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-10946"
+      ],
+      "id": "JSST-20190402",
+      "summary": "[20190402] - Core - Helpsites refresh endpoint callable for unauthenticated users",
+      "url": "https://developer.joomla.org/security-centre/778-20190402-core-helpsites-refresh-endpoint-callable-for-unauthenticated-users.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.5",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-11358"
+      ],
+      "id": "JSST-20190403",
+      "summary": "[20190403] - Core - Object.prototype pollution in JQuery $.extend",
+      "url": "https://developer.joomla.org/security-centre/779-20190403-core-object-prototype-pollution-in-jquery-extend.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.6",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-11809"
+      ],
+      "id": "JSST-20190501",
+      "summary": "[20190501] - Core - XSS in com_users ACL debug views",
+      "url": "https://developer.joomla.org/security-centre/780-20190501-core-xss-in-com-users-acl-debug-view.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.6",
+          "introduced": "3.9.3"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20190502",
+      "summary": "[20190502] - Core - By-passing protection of Phar Stream Wrapper Interceptor",
+      "url": "https://developer.joomla.org/security-centre/781-20190502-core-by-passing-protection-of-phar-stream-wrapper-interceptor.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.7",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-12765"
+      ],
+      "id": "JSST-20190601",
+      "summary": "[20190601] - Core - CSV injection in com_actionlogs",
+      "url": "https://developer.joomla.org/security-centre/783-20190601-core-csv-injection-in-com-actionlogs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.7",
+          "introduced": "3.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-12766"
+      ],
+      "id": "JSST-20190602",
+      "summary": "[20190602] - Core - XSS in subform field",
+      "url": "https://developer.joomla.org/security-centre/784-20190602-core-xss-in-subform-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.7",
+          "introduced": "3.8.13"
+        }
+      ],
+      "cves": [
+        "CVE-2019-12764"
+      ],
+      "id": "JSST-20190603",
+      "summary": "[20190603] - Core - ACL hardening of com_joomlaupdate",
+      "url": "https://developer.joomla.org/security-centre/785-20190603-core-acl-hardening-of-com-joomlaupdate.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.9",
+          "introduced": "3.9.7"
+        }
+      ],
+      "cves": [
+        "CVE-2019-14654"
+      ],
+      "id": "JSST-20190701",
+      "summary": "[20190701] - Core - Filter attribute in subform fields allows remote code execution",
+      "url": "https://developer.joomla.org/security-centre/787-20190701-core-filter-attribute-in-subform-fields-allows-remote-code-execution.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.11",
+          "introduced": "1.6.2"
+        }
+      ],
+      "cves": [
+        "CVE-2019-15028"
+      ],
+      "id": "JSST-20190801",
+      "summary": "[20190801] - Core - Hardening com_contact contact form",
+      "url": "https://developer.joomla.org/security-centre/789-20190801-core-hardening-com-contact-contact-form.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.12",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-16725"
+      ],
+      "id": "JSST-20190901",
+      "summary": "[20190901] - Core - XSS in logo parameter of default templates",
+      "url": "https://developer.joomla.org/security-centre/791-20190901-core-xss-in-logo-parameter-of-default-templates.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.13",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-18650"
+      ],
+      "id": "JSST-20191001",
+      "summary": "[20191001] - Core - CSRF in com_template overrides view",
+      "url": "https://developer.joomla.org/security-centre/794-20191001-core-csrf-in-com-template-overrides-view.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.13",
+          "introduced": "3.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-18674"
+      ],
+      "id": "JSST-20191002",
+      "summary": "[20191002] - Core - Path Disclosure in phpuft8 mapping files",
+      "url": "https://developer.joomla.org/security-centre/795-20191002-core-path-disclosure-in-phpuft8-mapping-files.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.14",
+          "introduced": "3.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-19845"
+      ],
+      "id": "JSST-20191201",
+      "summary": "[20191201] - Core - Path Disclosure in framework files",
+      "url": "https://developer.joomla.org/security-centre/796-20191201-core-path-disclosure-in-framework-files.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.14",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-19846"
+      ],
+      "id": "JSST-20191202",
+      "summary": "[20191202] - Core - Various SQL injections through configuration parameters",
+      "url": "https://developer.joomla.org/security-centre/797-20191202-core-various-sql-injections-through-configuration-parameters.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.15",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-8419"
+      ],
+      "id": "JSST-20200101",
+      "summary": "[20200101] - Core - CSRF in batch actions",
+      "url": "https://developer.joomla.org/security-centre/798-20200101-core-csrf-in-batch-actions.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.15",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-8420"
+      ],
+      "id": "JSST-20200102",
+      "summary": "[20200102] - Core - CSRF com_templates LESS compiler",
+      "url": "https://developer.joomla.org/security-centre/799-20200102-core-csrf-com-templates-less-compiler.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.15",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-8421"
+      ],
+      "id": "JSST-20200103",
+      "summary": "[20200103] - Core - XSS in com_actionlogs",
+      "url": "https://developer.joomla.org/security-centre/800-20200103-core-xss-in-com-actionlogs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10241"
+      ],
+      "id": "JSST-20200301",
+      "summary": "[20200301] - Core - CSRF in com_templates image actions",
+      "url": "https://developer.joomla.org/security-centre/802-20200301-core-csrf-in-com-templates-image-actions.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10242"
+      ],
+      "id": "JSST-20200302",
+      "summary": "[20200302] - Core - XSS in Protostar and Beez3",
+      "url": "https://developer.joomla.org/security-centre/803-20200302-core-xss-in-protostar-and-beez3.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10238"
+      ],
+      "id": "JSST-20200303",
+      "summary": "[20200303] - Core - Incorrect Access Control in com_templates",
+      "url": "https://developer.joomla.org/security-centre/804-20200303-core-incorrect-access-control-in-com-templates.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10240"
+      ],
+      "id": "JSST-20200304",
+      "summary": "[20200304] - Core - Identifier collisions in com_users",
+      "url": "https://developer.joomla.org/security-centre/805-20200304-core-identifier-collisions-in-com-users.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10239"
+      ],
+      "id": "JSST-20200305",
+      "summary": "[20200305] - Core - Incorrect Access Control in com_fields SQL field",
+      "url": "https://developer.joomla.org/security-centre/806-20200305-core-incorrect-access-control-in-com-fields-sql-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.16",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-10243"
+      ],
+      "id": "JSST-20200306",
+      "summary": "[20200306] - Core - SQL injection in Featured Articles menu parameters",
+      "url": "https://developer.joomla.org/security-centre/807-20200306-core-sql-injection-in-featured-articles-menu-parameters.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.17",
+          "introduced": "3.8.8"
+        }
+      ],
+      "cves": [
+        "CVE-2020-11891"
+      ],
+      "id": "JSST-20200401",
+      "summary": "[20200401] - Core - Incorrect access control in com_users access level editing function",
+      "url": "https://developer.joomla.org/security-centre/809-20200401-core-incorrect-access-control-in-com-users-access-level-editing-function.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.17",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-11890"
+      ],
+      "id": "JSST-20200402",
+      "summary": "[20200402] - Core - Missing checks for the root usergroup in usergroup table",
+      "url": "https://developer.joomla.org/security-centre/810-20200402-core-missing-checks-for-the-root-usergroup-in-usergroup-table.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.17",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-11889"
+      ],
+      "id": "JSST-20200403",
+      "summary": "[20200403] - Core -  Incorrect access control in com_users access level deletion function",
+      "url": "https://developer.joomla.org/security-centre/811-20200403-core-incorrect-access-control-in-com-users-access-level-deletion-function.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.19",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13761"
+      ],
+      "id": "JSST-20200601",
+      "summary": "[20200601] - Core - XSS in modules heading tag option",
+      "url": "https://developer.joomla.org/security-centre/813-20200601-core-xss-in-modules-heading-tag-option.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.19",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13763"
+      ],
+      "id": "JSST-20200602",
+      "summary": "[20200602] - Core - Inconsistent default textfilter settings",
+      "url": "https://developer.joomla.org/security-centre/814-20200602-core-inconsistent-default-textfilter-settings.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.19",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13762"
+      ],
+      "id": "JSST-20200603",
+      "summary": "[20200603] - Core - XSS in com_modules tag options",
+      "url": "https://developer.joomla.org/security-centre/815-20200603-core-xss-in-com-modules-tag-options.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.19",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-11022",
+        "CVE-2020-11023"
+      ],
+      "id": "JSST-20200604",
+      "summary": "[20200604] - Core - XSS in jQuery.htmlPrefilter",
+      "url": "https://developer.joomla.org/security-centre/816-20200604-core-xss-in-jquery-htmlprefilter.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.19",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13760"
+      ],
+      "id": "JSST-20200605",
+      "summary": "[20200605] - Core - CSRF in com_postinstall",
+      "url": "https://developer.joomla.org/security-centre/817-20200605-core-csrf-in-com-postinstall.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [],
+      "id": "JSST-20200701",
+      "summary": "[20200701] - Core - CSRF in com_installer ajax_install endpoint",
+      "url": "https://developer.joomla.org/security-centre/818-20200701-core-csrf-in-com-installer-ajax-install-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-15699"
+      ],
+      "id": "JSST-20200702",
+      "summary": "[20200702] - Core - Missing checks can lead to a broken usergroups table record",
+      "url": "https://developer.joomla.org/security-centre/819-20200702-core-missing-checks-can-lead-to-a-broken-usergroups-table-record.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-15695"
+      ],
+      "id": "JSST-20200703",
+      "summary": "[20200703] - Core - CSRF in com_privacy remove-request feature",
+      "url": "https://developer.joomla.org/security-centre/820-20200703-core-csrf-in-com-privacy-remove-request-feature.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-15697"
+      ],
+      "id": "JSST-20200704",
+      "summary": "[20200704] - Core - Variable tampering via user table class",
+      "url": "https://developer.joomla.org/security-centre/821-20200704-core-variable-tampering-via-user-table-class.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-15696"
+      ],
+      "id": "JSST-20200705",
+      "summary": "[20200705] - Core - Escape mod_random_image link",
+      "url": "https://developer.joomla.org/security-centre/822-20200705-core-escape-mod-random-image-link.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.20",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-15698"
+      ],
+      "id": "JSST-20200706",
+      "summary": "[20200706] - Core - System Information screen could expose redis or proxy credentials",
+      "url": "https://developer.joomla.org/security-centre/823-20200706-core-system-information-screen-could-expose-redis-or-proxy-credentials.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.21",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-24599"
+      ],
+      "id": "JSST-20200801",
+      "summary": "[20200801] - Core - XSS in mod_latestactions",
+      "url": "https://developer.joomla.org/security-centre/824-20200801-core-xss-in-mod-latestactions.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.21",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-24598"
+      ],
+      "id": "JSST-20200802",
+      "summary": "[20200802] - Core - Open redirect in com_content vote feature",
+      "url": "https://developer.joomla.org/security-centre/825-20200802-core-open-redirect-in-com-content-vote-feature.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.21",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-24597"
+      ],
+      "id": "JSST-20200803",
+      "summary": "[20200803] - Core - Directory traversal in com_media",
+      "url": "https://developer.joomla.org/security-centre/827-20200803-core-directory-traversal-in-com-media.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35610"
+      ],
+      "id": "JSST-20201101",
+      "summary": "[20201101] - Core - com_finder ignores access levels on autosuggest",
+      "url": "https://developer.joomla.org/security-centre/828-20201101-core-com-finder-ignores-access-levels-on-autosuggest.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35611"
+      ],
+      "id": "JSST-20201102",
+      "summary": "[20201102] - Core - Disclosure of secrets in Global Configuration page",
+      "url": "https://developer.joomla.org/security-centre/829-20201102-core-disclosure-of-secrets-in-global-configuration-page.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35612"
+      ],
+      "id": "JSST-20201103",
+      "summary": "[20201103] - Core - Path traversal in mod_random_image",
+      "url": "https://developer.joomla.org/security-centre/830-20201103-core-path-traversal-in-mod-random-image.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35613"
+      ],
+      "id": "JSST-20201104",
+      "summary": "[20201104] - Core - SQL injection in com_users list view",
+      "url": "https://developer.joomla.org/security-centre/831-20201104-core-sql-injection-in-com-users-list-view.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35614"
+      ],
+      "id": "JSST-20201105",
+      "summary": "[20201105] - Core - User Enumeration in backend login",
+      "url": "https://developer.joomla.org/security-centre/832-20201105-core-user-enumeration-in-backend-login.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35615"
+      ],
+      "id": "JSST-20201106",
+      "summary": "[20201106] - Core - CSRF in com_privacy emailexport feature",
+      "url": "https://developer.joomla.org/security-centre/833-20201106-core-csrf-in-com-privacy-emailexport-feature.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.23",
+          "introduced": "1.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-35616"
+      ],
+      "id": "JSST-20201107",
+      "summary": "[20201107] - Core - Write ACL violation in multiple core views",
+      "url": "https://developer.joomla.org/security-centre/834-20201107-core-write-acl-violation-in-multiple-core-views.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.24",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23123"
+      ],
+      "id": "JSST-20210101",
+      "summary": "[20210101] - Core - com_modules exposes module names",
+      "url": "https://developer.joomla.org/security-centre/836-20210101-core-com-modules-exposes-module-names.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.24",
+          "introduced": "3.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23124"
+      ],
+      "id": "JSST-20210102",
+      "summary": "[20210102] - Core - XSS in mod_breadcrumbs aria-label attribute",
+      "url": "https://developer.joomla.org/security-centre/837-20210102-core-xss-in-mod-breadcrumbs-aria-label-attribute.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.24",
+          "introduced": "3.1.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23125"
+      ],
+      "id": "JSST-20210103",
+      "summary": "[20210103] - Core - XSS in com_tags image parameters",
+      "url": "https://developer.joomla.org/security-centre/838-20210103-core-xss-in-com-tags-image-parameters.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23126",
+        "CVE-2021-23127"
+      ],
+      "id": "JSST-20210301",
+      "summary": "[20210301] - Core - Insecure randomness within 2FA secret generation",
+      "url": "https://developer.joomla.org/security-centre/841-20210301-core-insecure-randomness-within-2fa-secret-generation.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23128"
+      ],
+      "id": "JSST-20210302",
+      "summary": "[20210302] - Core - Potential Insecure FOFEncryptRandval",
+      "url": "https://developer.joomla.org/security-centre/842-20210302-core-potential-insecure-fofencryptrandval.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23129"
+      ],
+      "id": "JSST-20210303",
+      "summary": "[20210303] - Core - XSS within alert messages showed to users",
+      "url": "https://developer.joomla.org/security-centre/843-20210303-core-xss-within-alert-messages-showed-to-users.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23130"
+      ],
+      "id": "JSST-20210304",
+      "summary": "[20210304] - Core - XSS within the feed parser library",
+      "url": "https://developer.joomla.org/security-centre/844-20210304-core-xss-within-the-feed-parser-library.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23131"
+      ],
+      "id": "JSST-20210305",
+      "summary": "[20210305] - Core - Input validation within the template manager",
+      "url": "https://developer.joomla.org/security-centre/845-20210305-core-input-validation-within-the-template-manager.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-23132"
+      ],
+      "id": "JSST-20210306",
+      "summary": "[20210306] - Core - com_media allowed paths that are not intended for image uploads",
+      "url": "https://developer.joomla.org/security-centre/846-20210306-core-com-media-allowed-paths-that-are-not-intended-for-image-uploads.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26027"
+      ],
+      "id": "JSST-20210307",
+      "summary": "[20210307] - Core - ACL violation within com_content frontend editing",
+      "url": "https://developer.joomla.org/security-centre/847-20210307-core-acl-violation-within-com-content-frontend-editing.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26028"
+      ],
+      "id": "JSST-20210308",
+      "summary": "[20210308] - Core - Path Traversal within joomla/archive zip class",
+      "url": "https://developer.joomla.org/security-centre/848-20210308-core-path-traversal-within-joomla-archive-zip-class.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.25",
+          "introduced": "1.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26029"
+      ],
+      "id": "JSST-20210309",
+      "summary": "[20210309] - Core - Inadequate filtering of form contents could allow to overwrite the author field",
+      "url": "https://developer.joomla.org/security-centre/849-20210309-core-inadequate-filtering-of-form-contents-could-allow-to-overwrite-the-author-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.26",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26030"
+      ],
+      "id": "JSST-20210401",
+      "summary": "[20210401] - Core - Escape xss in logo parameter error pages",
+      "url": "https://developer.joomla.org/security-centre/850-20210401-core-escape-xss-in-logo-parameter-error-pages.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.26",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26031"
+      ],
+      "id": "JSST-20210402",
+      "summary": "[20210402] - Core - Inadequate filters on module layout settings",
+      "url": "https://developer.joomla.org/security-centre/851-20210402-core-inadequate-filters-on-module-layout-settings.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.27",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26032"
+      ],
+      "id": "JSST-20210501",
+      "summary": "[20210501] - Core - Adding HTML to the executable block list of MediaHelper::canUpload",
+      "url": "https://developer.joomla.org/security-centre/852-20210501-core-adding-html-to-the-executable-block-list-of-mediahelper-canupload.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.27",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26033"
+      ],
+      "id": "JSST-20210502",
+      "summary": "[20210502] - Core - CSRF in AJAX reordering endpoint",
+      "url": "https://developer.joomla.org/security-centre/853-20210502-core-csrf-in-ajax-reordering-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.27",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26034"
+      ],
+      "id": "JSST-20210503",
+      "summary": "[20210503] - Core - CSRF in data download endpoints",
+      "url": "https://developer.joomla.org/security-centre/854-20210503-core-csrf-in-data-download-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.28",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26035"
+      ],
+      "id": "JSST-20210701",
+      "summary": "[20210701] - Core - XSS in JForm Rules field",
+      "url": "https://developer.joomla.org/security-centre/856-20210701-core-xss-in-jform-rules-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.28",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26036"
+      ],
+      "id": "JSST-20210702",
+      "summary": "[20210702] - Core - DoS through usergroup table manipulation",
+      "url": "https://developer.joomla.org/security-centre/857-20210702-core-dos-through-usergroup-table-manipulation.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.28",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26037"
+      ],
+      "id": "JSST-20210703",
+      "summary": "[20210703] - Core - Lack of enforced session termination",
+      "url": "https://developer.joomla.org/security-centre/858-20210703-core-lack-of-enforced-session-termination.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.28",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26038"
+      ],
+      "id": "JSST-20210704",
+      "summary": "[20210704] - Core - Privilege escalation through com_installer",
+      "url": "https://developer.joomla.org/security-centre/859-20210704-core-privilege-escalation-through-com-installer.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.9.28",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26039"
+      ],
+      "id": "JSST-20210705",
+      "summary": "[20210705] - Core - XSS in com_media imagelist",
+      "url": "https://developer.joomla.org/security-centre/860-20210705-core-xss-in-com-media-imagelist.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.0.1",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-26040"
+      ],
+      "id": "JSST-20210801",
+      "summary": "[20210801] - Core - Insufficient access control for com_media deletion endpoint",
+      "url": "https://developer.joomla.org/security-centre/861-20210801-core-insufficient-access-control-for-com-media-deletion-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23793"
+      ],
+      "id": "JSST-20220301",
+      "summary": "[20220301] - Core - Zip Slip within the Tar extractor",
+      "url": "https://developer.joomla.org/security-centre/870-20220301-core-zip-slip-within-the-tar-extractor.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23794"
+      ],
+      "id": "JSST-20220302",
+      "summary": "[20220302] - Core - Path Disclosure within filesystem error messages",
+      "url": "https://developer.joomla.org/security-centre/871-20220302-core-path-disclosure-within-filesystem-error-messages.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23795"
+      ],
+      "id": "JSST-20220303",
+      "summary": "[20220303] - Core - User row are not bound to a authentication mechanism",
+      "url": "https://developer.joomla.org/security-centre/872-20220303-core-user-row-are-not-bound-to-a-authentication-mechanism.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "3.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23796"
+      ],
+      "id": "JSST-20220304",
+      "summary": "[20220304] - Core - Missing input validation within com_fields class inputs",
+      "url": "https://developer.joomla.org/security-centre/873-20220304-core-missing-input-validation-within-com-fields-class-inputs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23797"
+      ],
+      "id": "JSST-20220305",
+      "summary": "[20220305] - Core - Inadequate filtering on the selected Ids",
+      "url": "https://developer.joomla.org/security-centre/874-20220305-core-inadequate-filtering-on-the-selected-ids.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.7",
+          "introduced": "2.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23798"
+      ],
+      "id": "JSST-20220306",
+      "summary": "[20220306] - Core - Inadequate validation of internal URLs",
+      "url": "https://developer.joomla.org/security-centre/875-20220306-core-inadequate-validation-of-internal-urls.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.1.1",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23799"
+      ],
+      "id": "JSST-20220307",
+      "summary": "[20220307] - Core - Variable Tampering on JInput $_REQUEST data",
+      "url": "https://developer.joomla.org/security-centre/876-20220307-core-variable-tampering-on-jinput-request-data.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.1.1",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23800"
+      ],
+      "id": "JSST-20220308",
+      "summary": "[20220308] - Core - Inadequate content filtering within the filter code",
+      "url": "https://developer.joomla.org/security-centre/877-20220308-core-inadequate-content-filtering-within-the-filter-code.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.1.1",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-23801"
+      ],
+      "id": "JSST-20220309",
+      "summary": "[20220309] - Core - XSS attack vector through SVG",
+      "url": "https://developer.joomla.org/security-centre/878-20220309-core-xss-attack-vector-through-svg.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.1",
+          "introduced": "4.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-27911"
+      ],
+      "id": "JSST-20220801",
+      "summary": "[20220801] - Core - Multiple Full Path Disclosures because of missing '_JEXEC or die check'",
+      "url": "https://developer.joomla.org/security-centre/884-20220801-core-multiple-full-path-disclosures-because-of-missing-jexec-or-die-check.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.4",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-27912"
+      ],
+      "id": "JSST-20221001",
+      "summary": "[20221001] - Core - Disclosure of critical information in debug mode",
+      "url": "https://developer.joomla.org/security-centre/885-20221001-core-disclosure-of-critical-information-in-debug-mode.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.4",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-27913"
+      ],
+      "id": "JSST-20221002",
+      "summary": "[20221002] - Core - RXSS through reflection of user input in headings",
+      "url": "https://developer.joomla.org/security-centre/886-20221002-core-reflected-xss-in-various-components.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.5",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-27914"
+      ],
+      "id": "JSST-20221101",
+      "summary": "[20221101] - Core - RXSS through reflection of user input in com_media",
+      "url": "https://developer.joomla.org/security-centre/887-20221101-core-rxss-through-reflection-of-user-input-in-com-media.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.7",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-23750"
+      ],
+      "id": "JSST-20230101",
+      "summary": "[20230101] - Core - CSRF within post-installation messages",
+      "url": "https://developer.joomla.org/security-centre/890-20230101-core-csrf-within-post-installation-messages.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.7",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-23751"
+      ],
+      "id": "JSST-20230102",
+      "summary": "[20230102] - Core - Missing ACL checks for com_actionlogs",
+      "url": "https://developer.joomla.org/security-centre/891-20230102-core-missing-acl-checks-for-com-actionlogs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.2.8",
+          "introduced": "4.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-23752"
+      ],
+      "id": "JSST-20230201",
+      "summary": "[20230201] - Core - Improper access check in webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/894-20230201-core-improper-access-check-in-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.3.2",
+          "introduced": "4.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-23754"
+      ],
+      "id": "JSST-20230501",
+      "summary": "[20230501] - Core - Open Redirects and XSS within the mfa selection",
+      "url": "https://developer.joomla.org/security-centre/899-20230501-core-open-redirects-and-xss-within-the-mfa-selection.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.3.2",
+          "introduced": "4.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-23755"
+      ],
+      "id": "JSST-20230502",
+      "summary": "[20230502] - Core - Bruteforce prevention within the mfa screen",
+      "url": "https://developer.joomla.org/security-centre/900-20230502-core-bruteforce-prevention-within-the-mfa-screen.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.14-elts",
+          "introduced": "1.6.0"
+        },
+        {
+          "fixed": "5.0.1",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-40626"
+      ],
+      "id": "JSST-20231101",
+      "summary": "[20231101] - Core - Exposure of environment variables",
+      "url": "https://developer.joomla.org/security-centre/919-20231101-core-exposure-of-environment-variables.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.15-elts",
+          "introduced": "3.2.0"
+        },
+        {
+          "fixed": "4.4.3",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.0.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21722"
+      ],
+      "id": "JSST-20240201",
+      "summary": "[20240201] - Core - Insufficient session expiration in MFA management views",
+      "url": "https://developer.joomla.org/security-centre/925-20240201-core-insufficient-session-expiration-in-mfa-management-views.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.15-elts",
+          "introduced": "1.5.0"
+        },
+        {
+          "fixed": "4.4.3",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.0.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21723"
+      ],
+      "id": "JSST-20240202",
+      "summary": "[20240202] - Core - Open redirect in installation application",
+      "url": "https://developer.joomla.org/security-centre/926-20240202-core-open-redirect-in-installation-application.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.15-elts",
+          "introduced": "1.6.0"
+        },
+        {
+          "fixed": "4.4.3",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.0.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21724"
+      ],
+      "id": "JSST-20240203",
+      "summary": "[20240203] - Core - XSS in media selection fields",
+      "url": "https://developer.joomla.org/security-centre/927-20240203-core-xss-in-media-selection-fields.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.3",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.0.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21725"
+      ],
+      "id": "JSST-20240204",
+      "summary": "[20240204] - Core - XSS in mail address outputs",
+      "url": "https://developer.joomla.org/security-centre/928-20240204-core-xss-in-mail-address-outputs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.15-elts",
+          "introduced": "3.7.0"
+        },
+        {
+          "fixed": "4.4.3",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.0.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21726"
+      ],
+      "id": "JSST-20240205",
+      "summary": "[20240205] - Core - Inadequate content filtering within the filter code",
+      "url": "https://developer.joomla.org/security-centre/929-20240205-core-inadequate-content-filtering-within-the-filter-code.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.2",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21729"
+      ],
+      "id": "JSST-20240701",
+      "summary": "[20240701] - Core - XSS in accessible media selection field",
+      "url": "https://developer.joomla.org/security-centre/935-20240701-core-xss-in-accessible-media-selection-field.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.2",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21730"
+      ],
+      "id": "JSST-20240702",
+      "summary": "[20240702] - Core - Self-XSS in fancyselect list field layout",
+      "url": "https://developer.joomla.org/security-centre/936-20240702-core-self-xss-in-fancyselect-list-field-layout.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.16-elts",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "4.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.2",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-21731"
+      ],
+      "id": "JSST-20240703",
+      "summary": "[20240703] - Core - XSS in StringHelper::truncate method",
+      "url": "https://developer.joomla.org/security-centre/937-20240703-core-xss-in-stringhelper-truncate-method.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.16-elts",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "4.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.2",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-26279"
+      ],
+      "id": "JSST-20240704",
+      "summary": "[20240704] - Core - XSS in Wrapper extensions",
+      "url": "https://developer.joomla.org/security-centre/938-20240704-core-xss-in-wrapper-extensions.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.16-elts",
+          "introduced": "3.7.0"
+        },
+        {
+          "fixed": "4.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.2",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-26278"
+      ],
+      "id": "JSST-20240705",
+      "summary": "[20240705] - Core - XSS in com_fields default field value",
+      "url": "https://developer.joomla.org/security-centre/939-20240705-core-xss-in-com-fields-default-field-value.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.17-elts",
+          "introduced": "3.4.6"
+        },
+        {
+          "fixed": "4.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-27184"
+      ],
+      "id": "JSST-20240801",
+      "summary": "[20240801] - Core - Inadequate validation of internal URLs",
+      "url": "https://developer.joomla.org/security-centre/941-20240801-core-inadequate-validation-of-internal-urls.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.17-elts",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "4.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-27185"
+      ],
+      "id": "JSST-20240802",
+      "summary": "[20240802] - Core - Cache Poisoning in Pagination",
+      "url": "https://developer.joomla.org/security-centre/942-20240802-core-cache-poisoning-in-pagination.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-27187"
+      ],
+      "id": "JSST-20240804",
+      "summary": "[20240804] - Core - Improper ACL for backend profile view",
+      "url": "https://developer.joomla.org/security-centre/945-20240804-core-improper-acl-for-backend-profile-view.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.17-elts",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "4.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.1.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-40743"
+      ],
+      "id": "JSST-20240805",
+      "summary": "[20240805] - Core - XSS vectors in Outputfilter::strip* methods",
+      "url": "https://developer.joomla.org/security-centre/946-20240805-core-xss-vectors-in-outputfilter-strip-methods.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.10",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.2.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-40747"
+      ],
+      "id": "JSST-20250101",
+      "summary": "[20250101] - Core - XSS vectors in module chromes",
+      "url": "https://developer.joomla.org/security-centre/954-20250101-core-xss-vectors-in-module-chromes.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.20-elts",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "4.4.10",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.2.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-40748"
+      ],
+      "id": "JSST-20250102",
+      "summary": "[20250102] - Core - XSS vector in the id attribute of menu lists",
+      "url": "https://developer.joomla.org/security-centre/955-20250102-core-xss-vector-in-the-id-attribute-of-menu-lists.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "3.10.20-elts",
+          "introduced": "3.9.0"
+        },
+        {
+          "fixed": "4.4.10",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.2.3",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-40749"
+      ],
+      "id": "JSST-20250103",
+      "summary": "[20250103] - Core - Read ACL violation in multiple core views",
+      "url": "https://developer.joomla.org/security-centre/956-20250103-core-read-acl-violation-in-multiple-core-views.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.11",
+          "introduced": "4.1.0"
+        },
+        {
+          "fixed": "5.2.4",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-22207"
+      ],
+      "id": "JSST-20250201",
+      "summary": "[20250201] - Core - SQL injection vulnerability in Scheduled Tasks component",
+      "url": "https://developer.joomla.org/security-centre/958-20250201-core-sql-injection-vulnerability-in-scheduled-tasks-component.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.12",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.2.5",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-22213"
+      ],
+      "id": "JSST-20250301",
+      "summary": "[20250301] - Core - Malicious file uploads via Media Manager",
+      "url": "https://developer.joomla.org/security-centre/961-20250301-core-malicious-file-uploads-via-media-manager.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "2.2.0",
+          "introduced": "1.0.0"
+        },
+        {
+          "fixed": "3.4.0",
+          "introduced": "3.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-25226"
+      ],
+      "id": "JSST-20250401",
+      "summary": "[20250401] - Framework - SQL injection vulnerability in quoteNameStr method of Database package",
+      "url": "https://developer.joomla.org/security-centre/963-20250401-framework-sql-injection-vulnerability-in-quotenamestr-method-of-database-package.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.13",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.2.6",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-25227"
+      ],
+      "id": "JSST-20250402",
+      "summary": "[20250402] - Core - MFA Authentication Bypass",
+      "url": "https://developer.joomla.org/security-centre/964-20250402-core-mfa-authentication-bypass.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.14",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "5.3.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.3.4",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-54476"
+      ],
+      "id": "JSST-20250901",
+      "summary": "[20250901] - Core - Inadequate content filtering within the checkAttribute filter code",
+      "url": "https://developer.joomla.org/security-centre/1010-20250901-core-inadequate-content-filtering-within-the-checkattribute-filter-code.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "4.4.14",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "5.3.4",
+          "introduced": "5.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-54477"
+      ],
+      "id": "JSST-20250902",
+      "summary": "[20250902] - Core - User-Enumeration in passkey authentication method",
+      "url": "https://developer.joomla.org/security-centre/1011-20250902-core-user-enumeration-in-passkey-authentication-method.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.2",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-63082"
+      ],
+      "id": "JSST-20260101",
+      "summary": "[20260101] - Core - Inadequate content filtering for data URLs",
+      "url": "https://developer.joomla.org/security-centre/1016-20260101-core-inadequate-content-filtering-for-data-urls.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.2",
+          "introduced": "3.9.0"
+        },
+        {
+          "fixed": "6.0.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-63083"
+      ],
+      "id": "JSST-20260102",
+      "summary": "[20260102] - Core - XSS vectors in the pagebreak and pagenavigation plugins",
+      "url": "https://developer.joomla.org/security-centre/1017-20260102-core-xss-vector-in-the-pagebreak-plugin.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-21629"
+      ],
+      "id": "JSST-20260301",
+      "summary": "[20260301] - Core - ACL hardening in com_ajax",
+      "url": "https://developer.joomla.org/security-centre/1027-20260301-core-acl-hardening-in-com-ajax.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-21630"
+      ],
+      "id": "JSST-20260302",
+      "summary": "[20260302] - Core - SQL injection in com_content articles webservice endpoint",
+      "url": "https://developer.joomla.org/security-centre/1028-20260302-core-sql-injection-in-com-content-articles-webservice-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-21631"
+      ],
+      "id": "JSST-20260303",
+      "summary": "[20260303] - Core - XSS vector in com_associations comparison view",
+      "url": "https://developer.joomla.org/security-centre/1029-20260303-core-xss-vector-in-com-associations-comparison-view.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-21632"
+      ],
+      "id": "JSST-20260304",
+      "summary": "[20260304] - Core - XSS vectors in various article title outputs",
+      "url": "https://developer.joomla.org/security-centre/1030-20260304-core-xss-vectors-in-various-article-title-outputs.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-23898"
+      ],
+      "id": "JSST-20260305",
+      "summary": "[20260305] - Core - Arbitrary file deletion in com_joomlaupdate",
+      "url": "https://developer.joomla.org/security-centre/1031-20260305-core-arbitrary-file-deletion-in-com-joomlaupdate.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.4",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.0.4",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-23899"
+      ],
+      "id": "JSST-20260306",
+      "summary": "[20260306] - Core - Improper access check in webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1032-20260306-core-improper-access-check-in-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-25900"
+      ],
+      "id": "JSST-20260501",
+      "summary": "[20260501] - Core - XSS in feed modules",
+      "url": "https://developer.joomla.org/security-centre/1033-20260501-core-xss-in-feed-modules.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-25901"
+      ],
+      "id": "JSST-20260502",
+      "summary": "[20260502] - Core - XSS in com_associations",
+      "url": "https://developer.joomla.org/security-centre/1034-20260502-core-xss-in-com-associations.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-30894"
+      ],
+      "id": "JSST-20260503",
+      "summary": "[20260503] - Core - XSS in com_contenthistory",
+      "url": "https://developer.joomla.org/security-centre/1035-20260503-core-xss-in-com-contenthistory.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-30895"
+      ],
+      "id": "JSST-20260504",
+      "summary": "[20260504] - Core - XSS in readmore links",
+      "url": "https://developer.joomla.org/security-centre/1036-20260504-core-xss-in-readmore-links.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-35220"
+      ],
+      "id": "JSST-20260505",
+      "summary": "[20260505] - Core - CSRF in user activation endpoint",
+      "url": "https://developer.joomla.org/security-centre/1037-20260505-core-csrf-in-user-activation-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "5.4.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-35221"
+      ],
+      "id": "JSST-20260506",
+      "summary": "[20260506] - Core - Authenticated blind SQLi in com_finder",
+      "url": "https://developer.joomla.org/security-centre/1038-20260506-core-authenticated-blind-sqli-in-com-finder.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-352212"
+      ],
+      "id": "JSST-20260507",
+      "summary": "[20260507] - Core - Authenticated blind SQLi in com_tags",
+      "url": "https://developer.joomla.org/security-centre/1039-20260507-core-authenticated-blind-sqli-in-com-tags.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-35223"
+      ],
+      "id": "JSST-20260508",
+      "summary": "[20260508] - Core - Improper access check in com_config webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1040-20260508-core-improper-access-check-in-com-config-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.2.1"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-40383"
+      ],
+      "id": "JSST-20260509",
+      "summary": "[20260509] - Core - LFI in HTMLView layout parameter",
+      "url": "https://developer.joomla.org/security-centre/1041-20260509-core-lfi-in-htmlview-layout-parameter.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-40384"
+      ],
+      "id": "JSST-20260510",
+      "summary": "[20260510] - Core - Path traversal in com_media webservice endpoint",
+      "url": "https://developer.joomla.org/security-centre/1042-20260510-core-path-traversal-in-com-media-webservice-endpoint.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48896"
+      ],
+      "id": "JSST-20260511",
+      "summary": "[20260511] - Core - MFA Authentication Bypass",
+      "url": "https://developer.joomla.org/security-centre/1043-20260511-core-mfa-authentication-bypass.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48897"
+      ],
+      "id": "JSST-20260512",
+      "summary": "[20260512] - Core - MFA Authentication Bypass",
+      "url": "https://developer.joomla.org/security-centre/1044-20260512-core-mfa-authentication-bypass.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48898"
+      ],
+      "id": "JSST-20260513",
+      "summary": "[20260513] - Core - Privilege escalation through com_users batch task",
+      "url": "https://developer.joomla.org/security-centre/1045-20260513-core-privilege-escalation-through-com-users-batch-task.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48904"
+      ],
+      "id": "JSST-20260514",
+      "summary": "[20260514] - Core - Privilege escalation through com_users webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1046-20260514-core-privilege-escalation-through-com-users-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48899"
+      ],
+      "id": "JSST-20260515",
+      "summary": "[20260515] - Core - Incorrect Access Control in sample data plugins",
+      "url": "https://developer.joomla.org/security-centre/1047-20260515-core-incorrect-access-control-in-sample-data-plugins.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.1.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48900"
+      ],
+      "id": "JSST-20260516",
+      "summary": "[20260516] - Core - Incorrect Access Control in com_scheduler",
+      "url": "https://developer.joomla.org/security-centre/1048-20260516-core-incorrect-access-control-in-com-scheduler.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48901"
+      ],
+      "id": "JSST-20260517",
+      "summary": "[20260517] - Core - Incorrect Cache Key Construction for InputFilter objects",
+      "url": "https://developer.joomla.org/security-centre/1049-20260517-core-incorrect-cache-key-construction-for-inputfilter-objects.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.9.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48902"
+      ],
+      "id": "JSST-20260518",
+      "summary": "[20260518] - Core - Transport encryption downgrade for password and username reset links",
+      "url": "https://developer.joomla.org/security-centre/1050-20260518-core-transport-encryption-downgrade-for-password-and-username-reset-links.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48903"
+      ],
+      "id": "JSST-20260519",
+      "summary": "[20260519] - Framework - Inadequate content filtering within the checkAttribute filter code",
+      "url": "https://developer.joomla.org/security-centre/1051-20260519-framework-inadequate-content-filtering-within-the-checkattribute-filter-code.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.6",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.1",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48905"
+      ],
+      "id": "JSST-20260520",
+      "summary": "[20260520] - Framework - Inadequate content filtering within the cleanAttributes filter code",
+      "url": "https://developer.joomla.org/security-centre/1052-20260520-framework-inadequate-content-filtering-within-the-cleanattributes-filter-code.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.1.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48947"
+      ],
+      "id": "JSST-20260701",
+      "summary": "[20260701] - Core - Incorrect Access Control in com_media webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1055-20260701-core-incorrect-access-control-in-com-media-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48948"
+      ],
+      "id": "JSST-20260702",
+      "summary": "[20260702] - Core - Incorrect Access Control in com_contact vcf download",
+      "url": "https://developer.joomla.org/security-centre/1056-20260702-core-incorrect-access-control-in-com-contact-vcf-download.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.2.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48949"
+      ],
+      "id": "JSST-20260703",
+      "summary": "[20260703] - Core - XSS in MFA method management",
+      "url": "https://developer.joomla.org/security-centre/1057-20260703-core-xss-in-mfa-method-management.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48950"
+      ],
+      "id": "JSST-20260704",
+      "summary": "[20260704] - Core - XSS in com_templates",
+      "url": "https://developer.joomla.org/security-centre/1058-20260704-core-xss-in-com-templates.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48951"
+      ],
+      "id": "JSST-20260705",
+      "summary": "[20260705] - Core - XSS in various modalreturn layouts",
+      "url": "https://developer.joomla.org/security-centre/1059-20260705-core-xss-in-various-modalreturn-layouts.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48952"
+      ],
+      "id": "JSST-20260706",
+      "summary": "[20260706] - Core - XSS in com_installer",
+      "url": "https://developer.joomla.org/security-centre/1060-20260706-core-xss-in-com-installer.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48953"
+      ],
+      "id": "JSST-20260707",
+      "summary": "[20260707] - Core - XSS in the generic image output layout",
+      "url": "https://developer.joomla.org/security-centre/1061-20260707-core-xss-in-the-generic-image-output-layout.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48954"
+      ],
+      "id": "JSST-20260708",
+      "summary": "[20260708] - Core - XSS through language overrides",
+      "url": "https://developer.joomla.org/security-centre/1062-20260708-core-xss-through-language-overrides.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48955"
+      ],
+      "id": "JSST-20260709",
+      "summary": "[20260709] - Core - Incorrect Access Control in com_workflow",
+      "url": "https://developer.joomla.org/security-centre/1063-20260709-core-incorrect-access-control-in-com-workflow.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48956"
+      ],
+      "id": "JSST-20260710",
+      "summary": "[20260710] - Core - Incorrect Access Control in com_modules",
+      "url": "https://developer.joomla.org/security-centre/1064-20260710-core-incorrect-access-control-in-com-modules.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48957"
+      ],
+      "id": "JSST-20260711",
+      "summary": "[20260711] - Core - Incorrect Access Control in com_privacy webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1065-20260711-core-incorrect-access-control-in-com-privacy-webservice-endpoints.html"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "5.4.7",
+          "introduced": "4.0.0"
+        },
+        {
+          "fixed": "6.1.2",
+          "introduced": "6.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-48958"
+      ],
+      "id": "JSST-20260712",
+      "summary": "[20260712] - Core - Incorrect Access Control in com_fields webservice endpoints",
+      "url": "https://developer.joomla.org/security-centre/1066-20260712-core-incorrect-access-control-in-com-fields-webservice-endpoints.html"
+    }
+  ]
+}
