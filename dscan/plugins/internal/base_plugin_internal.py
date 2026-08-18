@@ -832,10 +832,16 @@ class BasePluginInternal(controller.CementBaseController):
             resp = requests_verb(interesting_url, timeout=timeout,
                     headers=headers)
 
-            if resp.status_code == 200 or resp.status_code == 301:
+            # 401/403 still confirm the path exists (and is guarded), which
+            # is worth surfacing rather than silently discarding.
+            if resp.status_code in (200, 301, 401, 403):
+                note = ''
+                if resp.status_code in (401, 403):
+                    note = ' [access restricted, HTTP %d]' % resp.status_code
+
                 found.append({
                     'url': interesting_url,
-                    'description': description
+                    'description': description + note
                 })
 
             if not hide_progressbar:
