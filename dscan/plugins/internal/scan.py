@@ -90,6 +90,9 @@ class Scan(BasePlugin):
                 (['--resume'], dict(action='store_true', help='''Resume the url_file
                     scan as of the last known scanned url. Must be used in
                     conjunction with --error-log.''', default=None)),
+                (['--vulns-full'], dict(action='store_true', help='''Show the
+                    full list of known vulnerabilities instead of a
+                    categorized summary.''', default=False)),
             ]
 
     @controller.expose(hide=True)

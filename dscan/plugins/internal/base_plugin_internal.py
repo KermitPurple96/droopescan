@@ -10,6 +10,7 @@ from dscan.common import ScanningMethod, StandardOutput, JsonOutput, \
 from dscan.common import template, enum_list, dict_combine, base_url, file_len
 from dscan.common.output import ProgressBar
 from dscan.common.vulnerabilities import VulnerabilitiesFile
+import dscan.common.vulnerabilities as vulnerabilities
 from dscan import common
 from functools import partial
 from os.path import dirname
@@ -105,6 +106,7 @@ class BasePluginInternal(controller.CementBaseController):
         themes_base_url = pargs.themes_base_url
         debug = pargs.debug
         resume = pargs.resume
+        vulns_full = pargs.vulns_full
         number = pargs.number if not pargs.number == 'all' else 100000
         if pargs.error_log:
             error_log = self._path(pargs.error_log, pwd)
@@ -470,32 +472,61 @@ class BasePluginInternal(controller.CementBaseController):
             result[enumerate] = {'finds': finds, 'is_empty': is_empty}
 
         if self.vulnf and 'version' in result and result['version']['finds']:
-            vuln_finds = self.vulnerabilities_format(result['version']['finds'])
+            matches = self.vulnf.for_versions(result['version']['finds'])
+            vuln_finds = self.vulnerabilities_format(matches, full=opts['vulns_full'])
             result['vulnerabilities'] = {
                 'finds': vuln_finds,
-                'is_empty': len(vuln_finds) == 0,
+                'is_empty': len(matches) == 0,
             }
 
         return result
 
-    def vulnerabilities_format(self, versions):
-        """
-        @param versions: a list of version strings, as returned by
-            enumerate_version.
-        @return: a list of human-readable strings describing known
-            vulnerabilities affecting any of the given versions.
-        """
-        formatted = []
-        for vuln in self.vulnf.for_versions(versions):
-            cves = (' (%s)' % ', '.join(vuln['cves'])) if vuln['cves'] else ''
-            summary = vuln['summary']
-            if len(summary) > 200:
-                summary = summary[:200].rsplit(' ', 1)[0] + '...'
+    def _vulnerability_line(self, vuln, truncate=200):
+        cves = (' (%s)' % ', '.join(vuln['cves'])) if vuln['cves'] else ''
+        summary = vuln['summary']
+        if truncate and len(summary) > truncate:
+            summary = summary[:truncate].rsplit(' ', 1)[0] + '...'
 
-            formatted.append('%s%s - %s - %s' % (vuln['id'], cves,
-                summary, vuln['url']))
+        return '%s%s - %s - %s' % (vuln['id'], cves, summary, vuln['url'])
 
-        return formatted
+    def vulnerabilities_format(self, matches, full=False):
+        """
+        @param matches: a list of vulnerability dicts, as returned by
+            VulnerabilitiesFile.for_versions.
+        @param full: if True, return the full list of vulnerabilities
+            instead of a categorized summary.
+        @return: a list of human-readable strings (one per output line)
+            describing known vulnerabilities affecting the identified
+            version(s).
+        """
+        if not matches:
+            return []
+
+        if full:
+            return [self._vulnerability_line(vuln) for vuln in matches]
+
+        with_cve = sum(1 for vuln in matches if vuln['cves'])
+
+        lines = ['%d known vulnerabilities affecting the identified version(s).'
+                % len(matches), '']
+        for category, category_matches in vulnerabilities.group_by_category(matches):
+            lines.append('  %3d  %s' % (len(category_matches), category))
+
+        lines.append('')
+        lines.append('%d/%d have an assigned CVE.' % (with_cve, len(matches)))
+
+        critical = [vuln for vuln in matches
+                if vulnerabilities.categorize(vuln['summary']) in vulnerabilities.CRITICAL_CATEGORIES]
+        if critical:
+            lines.append('')
+            lines.append('Critical findings:')
+            for vuln in critical:
+                lines.append('  ' + self._vulnerability_line(vuln, truncate=0))
+
+        lines.append('')
+        lines.append('Run with --vulns-full to see the complete list.')
+
+        return lines
 
     def _determine_redirect(self, url, verb, timeout=15, headers={}):
         """
