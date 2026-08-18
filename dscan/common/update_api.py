@@ -210,8 +210,15 @@ def _joomla_fields_get(body):
         if not strong:
             continue
 
-        label = strong.get_text(strip=True).rstrip(':')
-        fields[label] = li.get_text(strip=True)[len(strong.get_text(strip=True)):].strip()
+        # Split on the first colon rather than slicing by the <strong>
+        # tag's text length: some advisories have stray content bolded
+        # along with the label (e.g. "<strong>Versions: 4</strong>.0.0-...",
+        # a content typo on a couple of pages), which would otherwise eat
+        # part of the value.
+        label = strong.get_text(strip=True).split(':')[0].strip()
+        full_text = li.get_text(strip=True)
+        value = re.sub(r'^%s:?\s*' % re.escape(label), '', full_text, count=1)
+        fields[label] = value.strip()
 
     return fields
 
@@ -230,7 +237,7 @@ def _joomla_ranges_parse(versions_text, solution_text):
     solution_versions = re.findall(_JOOMLA_VERSION_RE, solution_text or '')
 
     ranges = []
-    for segment in versions_text.split(','):
+    for segment in re.split(r'[,&]', versions_text):
         segment = segment.strip()
         if not segment:
             continue
@@ -251,9 +258,21 @@ def _joomla_ranges_parse(versions_text, solution_text):
         if single:
             ranges.append([single[0], single[0]])
 
+    # Pair each range with its fixed version by leading major component
+    # rather than by position: some advisories cover a branch (typically
+    # ELTS, paid extended support) that has no free/public fix and so gets
+    # no corresponding entry in the Solution text at all, which would
+    # otherwise shift every later range's fixed version to the wrong one.
+    solution_by_major = {}
+    for sol_version in solution_versions:
+        major = sol_version.split('.')[0]
+        solution_by_major.setdefault(major, []).append(sol_version)
+
     affected = []
-    for i, (introduced, upper) in enumerate(ranges):
-        fixed = solution_versions[i] if i < len(solution_versions) else None
+    for introduced, upper in ranges:
+        major = introduced.split('.')[0]
+        same_major = solution_by_major.get(major, [])
+        fixed = same_major.pop(0) if same_major else None
         if not fixed or not version_gt(fixed, introduced):
             # No reliable exact fixed version could be recovered (older
             # advisories don't always spell it out); fall back to treating
