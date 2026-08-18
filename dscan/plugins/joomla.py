@@ -22,6 +22,17 @@ class Joomla(BasePlugin):
     # CMS identification and version detection.
     manifest_url = "administrator/manifests/files/joomla.xml"
 
+    # Language pack metafiles also carry an explicit <version> tag, and
+    # unlike manifest_url they aren't gated behind /administrator/. Not
+    # bumped on every single patch release though (only when the language
+    # strings themselves changed), so it's only trusted when it agrees
+    # with a hash-based candidate, never used to introduce a version on
+    # its own. en-GB ships with every core install regardless of the
+    # site's configured language, but is occasionally removed, so a few
+    # other commonly-installed packs are tried as a fallback.
+    language_codes = ['en-GB', 'es-ES', 'pt-BR', 'fr-FR', 'de-DE', 'it-IT',
+            'nl-NL', 'ru-RU', 'pt-PT', 'pl-PL', 'zh-CN', 'ja-JP', 'ar-AA']
+
     update_majors = ['1.5','1.6','1.7', '2.5', '3.0', '3.1', '3.2', '3.3',
             '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '4.0', '4.1',
             '4.2', '4.3', '4.4', '5.0', '5.1', '5.2', '5.3', '5.4', '6.0',
@@ -34,6 +45,7 @@ class Joomla(BasePlugin):
         ("libraries/simplepie/README.txt", "SimplePie README."),
         ("LICENSE.txt", "License file."),
         ("plugins/system/cache/cache.xml", "Version attribute contains approx version"),
+        ("language/en-GB/en-GB.xml", "English language pack manifest - version attribute usually matches the installed version."),
         ("README.txt", "Default readme file."),
         ("htaccess.txt", "Default .htaccess not renamed/enabled - recommended hardening not applied."),
         ("web.config.txt", "Default web.config not renamed/enabled - recommended hardening not applied."),
@@ -79,6 +91,39 @@ class Joomla(BasePlugin):
         match = re.search(r'<version>([^<]+)</version>', resp.text)
         return match.group(1).strip() if match else None
 
+    def enumerate_version_language(self, url, versions_estimated, timeout=15,
+            headers={}):
+        """
+        Narrows an ambiguous list of hash-based version candidates using a
+        language pack metafile's <version> tag, when it agrees with one of
+        them. Tries a handful of commonly-installed language codes, since
+        which one(s) are present depends on the site.
+        @param url: the installation's base URL.
+        @param versions_estimated: the ambiguous list of version candidates.
+        @param timeout: the number of seconds to wait prior to a timeout.
+        @param headers: a dictionary to pass to requests.get()
+        @return: a possibly-narrowed list of version candidates.
+        """
+        for code in self.language_codes:
+            try:
+                resp = self.session.get('%slanguage/%s/%s.xml' % (url, code, code),
+                        timeout=timeout, headers=headers)
+            except requests.RequestException:
+                continue
+
+            if resp.status_code != 200:
+                continue
+
+            match = re.search(r'<version>([^<]+)</version>', resp.text)
+            if not match:
+                continue
+
+            lang_version = match.group(1).strip()
+            if lang_version in versions_estimated:
+                return [lang_version]
+
+        return versions_estimated
+
     def enumerate_version(self, url, threads=10, verb='head', timeout=15,
             hide_progressbar=False, headers={}):
         version, is_empty = super(Joomla, self).enumerate_version(url,
@@ -90,6 +135,9 @@ class Joomla(BasePlugin):
                     timeout=timeout, headers=headers)
             if manifest_version:
                 return [manifest_version], False
+        elif len(version) > 1:
+            version = self.enumerate_version_language(url, version,
+                    timeout=timeout, headers=headers)
 
         return version, is_empty
 
