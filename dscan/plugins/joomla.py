@@ -3,6 +3,8 @@ from dscan.common.update_api import GitRepo
 from dscan.plugins import BasePlugin
 import dscan.common.update_api as ua
 import dscan.common.versions
+import re
+import requests
 
 class Joomla(BasePlugin):
     can_enumerate_plugins = False
@@ -11,6 +13,14 @@ class Joomla(BasePlugin):
     forbidden_url = "media/"
     regular_file_url = "media/system/js/validate.js"
     module_common_file = ""
+
+    # Since Joomla 4.0, the CMS' front-end assets were rewritten (webpack
+    # build, no more plain media/system/js/*), so none of the files
+    # fingerprinted above (nor in versions.xml) exist any more. This
+    # manifest, however, has reliably shipped with an explicit <version>
+    # tag since at least Joomla 2.5, so it is used as a fallback for both
+    # CMS identification and version detection.
+    manifest_url = "administrator/manifests/files/joomla.xml"
 
     update_majors = ['1.5','1.6','1.7', '2.5', '3.0', '3.1', '3.2', '3.3',
             '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '4.0', '4.1',
@@ -37,6 +47,52 @@ class Joomla(BasePlugin):
     @controller.expose(help='joomla related scanning tools')
     def joomla(self):
         self.plugin_init()
+
+    def enumerate_version_manifest(self, url, timeout=15, headers={}):
+        """
+        Reads the exact version straight out of the files_joomla update
+        manifest, which (unlike the hash-fingerprinted files) is still
+        present and accurate on Joomla 4/5/6.
+        @param url: the installation's base URL.
+        @param timeout: the number of seconds to wait prior to a timeout.
+        @param headers: a dictionary to pass to requests.get()
+        @return: the version string, or None if it could not be determined.
+        """
+        try:
+            resp = self.session.get(url + self.manifest_url, timeout=timeout,
+                    headers=headers)
+        except requests.RequestException:
+            return None
+
+        if resp.status_code != 200:
+            return None
+
+        match = re.search(r'<version>([^<]+)</version>', resp.text)
+        return match.group(1).strip() if match else None
+
+    def enumerate_version(self, url, threads=10, verb='head', timeout=15,
+            hide_progressbar=False, headers={}):
+        version, is_empty = super(Joomla, self).enumerate_version(url,
+                threads=threads, verb=verb, timeout=timeout,
+                hide_progressbar=hide_progressbar, headers=headers)
+
+        if is_empty:
+            manifest_version = self.enumerate_version_manifest(url,
+                    timeout=timeout, headers=headers)
+            if manifest_version:
+                return [manifest_version], False
+
+        return version, is_empty
+
+    def cms_identify(self, url, timeout=15, headers={}):
+        is_cms = super(Joomla, self).cms_identify(url, timeout=timeout,
+                headers=headers)
+
+        if not is_cms:
+            is_cms = self.enumerate_version_manifest(url, timeout=timeout,
+                    headers=headers) is not None
+
+        return is_cms
 
     def update_version_check(self):
         """
