@@ -66,7 +66,7 @@ class Drupal(BasePlugin):
             gr.tag_checkout(version)
             hashes[version] = gr.hashes_get(versions_file)
 
-        versions_file.update(hashes)
+        versions_file.update(hashes, gr.tags_dates_get())
         return versions_file
 
     def update_vulnerabilities(self):

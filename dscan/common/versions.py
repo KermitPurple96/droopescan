@@ -212,11 +212,13 @@ class VersionsFile():
 
         return False
 
-    def update(self, sums):
+    def update(self, sums, dates=None):
         """
         Update self.et with the sums as returned by VersionsX.sums_get
         @param sums: {'version': {'file1':'hash1'}}
+        @param dates: optional {'version': 'YYYY-MM-DD'} of release dates.
         """
+        dates = dates or {}
         for version in sums:
             hashes = sums[version]
             for filename in hashes:
@@ -234,6 +236,41 @@ class VersionsFile():
                             'md5': hsh,
                             'nb': version
                     }
+                    if version in dates:
+                        new_ver.attrib['date'] = dates[version]
+
+    def release_dates_get(self):
+        """
+        @return: {'version_nb': 'YYYY-MM-DD'} for every version that has a
+            release date on record. Not all versions necessarily have one.
+        """
+        dates = {}
+        for version_elem in self.root.findall('./files/file/version'):
+            date = version_elem.attrib.get('date')
+            nb = version_elem.attrib['nb']
+            if date and nb not in dates:
+                dates[nb] = date
+
+        return dates
+
+    def set_dates(self, dates):
+        """
+        Backfills the 'date' attribute on existing <version> elements that
+        don't already have one.
+        @param dates: {'version_nb': 'YYYY-MM-DD'}
+        @return: the number of <version> elements updated.
+        """
+        updated = 0
+        for version_elem in self.root.findall('.//version'):
+            if 'date' in version_elem.attrib:
+                continue
+
+            nb = version_elem.attrib['nb']
+            if nb in dates:
+                version_elem.attrib['date'] = dates[nb]
+                updated += 1
+
+        return updated
 
     def indent(self, elem, level=0):
         # @see http://effbot.org/zone/element-lib.htm#prettyprint

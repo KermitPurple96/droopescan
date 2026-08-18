@@ -2,7 +2,8 @@ from __future__ import print_function
 from cement.core import handler, controller
 from concurrent.futures import ThreadPoolExecutor
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
+from email.utils import parsedate_to_datetime
 from dscan.common.exceptions import FileEmptyException, CannotResumeException
 from dscan.common.http import BlockAll
 from dscan.common import ScanningMethod, StandardOutput, JsonOutput, \
@@ -868,11 +869,13 @@ class BasePluginInternal(controller.CementBaseController):
                     len(changelogs), "version")
 
         hashes = {}
+        responses = {}
         futures = {}
         with ThreadPoolExecutor(max_workers=threads) as executor:
             for file_url in files:
                 futures[file_url] = executor.submit(self.enumerate_file_hash,
-                        url, file_url=file_url, timeout=timeout, headers=headers)
+                        url, file_url=file_url, timeout=timeout, headers=headers,
+                        capture_response=responses)
 
             for file_url in futures:
                 if common.shutdown:
@@ -894,11 +897,70 @@ class BasePluginInternal(controller.CementBaseController):
         if self.vf.has_changelog():
             version = self.enumerate_version_changelog(url, version, timeout, headers=headers)
 
+        # Narrow down further using the Last-Modified header of the files we
+        # already fetched above, if the remote server preserves original
+        # file timestamps (many do, since release tarballs are usually built
+        # with consistent mtimes).
+        if len(version) > 1:
+            version = self.enumerate_version_last_modified(version, responses)
+
         if not hide_progressbar:
             p.increment_progress()
             p.hide()
 
         return version, len(version) == 0
+
+    def enumerate_version_last_modified(self, versions_estimated, responses):
+        """
+        Narrows down an ambiguous list of version candidates using the
+        Last-Modified header of already-fetched fingerprint files: a
+        candidate can be discarded if it was released well after the
+        newest Last-Modified date observed, since the installation can't be
+        running a version that didn't exist yet when its files were put in
+        place.
+        @param versions_estimated: the ambiguous list of version candidates.
+        @param responses: {file_url: requests.Response} of the fingerprint
+            requests already made for this scan.
+        @return: a possibly-narrowed list of version candidates. Falls back
+            to versions_estimated unchanged if no Last-Modified header is
+            available, no release dates are on record, or narrowing would
+            discard every candidate (a sign the header isn't trustworthy).
+        """
+        last_modified = None
+        for response in responses.values():
+            header = response.headers.get('Last-Modified')
+            if not header:
+                continue
+
+            try:
+                parsed = parsedate_to_datetime(header)
+            except (TypeError, ValueError):
+                continue
+
+            if parsed and (last_modified is None or parsed > last_modified):
+                last_modified = parsed
+
+        if not last_modified:
+            return versions_estimated
+
+        # A few days of grace: release tarball build dates and the git tag
+        # date this is compared against don't necessarily match exactly.
+        cutoff = last_modified.date() + timedelta(days=7)
+
+        dates = self.vf.release_dates_get()
+        narrowed = []
+        for candidate in versions_estimated:
+            release_date = dates.get(candidate)
+            if not release_date:
+                # No release date on record for this candidate - keep it
+                # rather than risk discarding the right answer.
+                narrowed.append(candidate)
+                continue
+
+            if datetime.strptime(release_date, '%Y-%m-%d').date() <= cutoff:
+                narrowed.append(candidate)
+
+        return narrowed if narrowed else versions_estimated
 
     def enumerate_version_changelog(self, url, versions_estimated, timeout=15,
             headers={}):
@@ -928,16 +990,23 @@ class BasePluginInternal(controller.CementBaseController):
         else:
             return versions_estimated
 
-    def enumerate_file_hash(self, url, file_url, timeout=15, headers={}):
+    def enumerate_file_hash(self, url, file_url, timeout=15, headers={},
+            capture_response=None):
         """
         Gets the MD5 of requests.get(url + file_url).
         @param url: the installation's base URL.
         @param file_url: the url of the file to hash.
         @param timeout: the number of seconds to wait prior to a timeout.
         @param headers: a dictionary to pass to requests.get()
+        @param capture_response: if given a dict, the response for this
+            request is stored in it under file_url (used to inspect
+            headers such as Last-Modified without an extra request).
         """
         r = self.session.get(url + file_url, timeout=timeout, headers=headers)
         if r.status_code == 200:
+            if capture_response is not None:
+                capture_response[file_url] = r
+
             hash = hashlib.md5(r.content).hexdigest()
             return hash
         else:

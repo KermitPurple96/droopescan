@@ -697,6 +697,28 @@ class GitRepo():
 
         return tags
 
+    def tags_dates_get(self):
+        """
+        @return: {'tag': 'YYYY-MM-DD'} for every tag in this repository,
+            using each tag's creation date (falls back to the commit date
+            for lightweight tags).
+        """
+        output = subprocess.check_output(['git', 'for-each-ref', 'refs/tags',
+                '--format=%(refname:short) %(creatordate:short)'], cwd=self.path)
+        if isinstance(output, bytes):
+            output = output.decode()
+
+        dates = {}
+        for line in output.split('\n'):
+            line = line.strip()
+            if not line:
+                continue
+
+            tag, date = line.rsplit(' ', 1)
+            dates[tag] = date
+
+        return dates
+
     def tag_checkout(self, tag):
         """
         Checks out a tag.
