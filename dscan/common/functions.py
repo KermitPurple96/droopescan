@@ -86,6 +86,15 @@ def template(template_file, variables={}):
 def strip_whitespace(s):
     return re.sub(r'\s+', ' ', s)
 
+def strtobool(val):
+    val = val.lower()
+    if val in ('y', 'yes', 't', 'true', 'on', '1'):
+        return 1
+    elif val in ('n', 'no', 'f', 'false', 'off', '0'):
+        return 0
+    else:
+        raise ValueError("invalid truth value %r" % (val,))
+
 def is_string(var):
     return isinstance(var, str)
 
@@ -207,7 +216,7 @@ def version_gt(version, gt):
     return gt
 
 def md5_file(filename):
-    return hashlib.md5(open(filename).read()).hexdigest()
+    return hashlib.md5(open(filename, 'rb').read()).hexdigest()
 
 def version_get():
     """

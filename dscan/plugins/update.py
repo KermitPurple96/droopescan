@@ -2,6 +2,7 @@ from __future__ import print_function
 from cement.core import handler, controller
 from dscan.plugins import HumanBasePlugin
 import dscan.common.plugins_util as pu
+import json
 import sys
 import dscan
 
@@ -16,6 +17,8 @@ class Update(HumanBasePlugin):
                 required=False, default=None)),
             (['--skip-modules'], dict(action='store_true', help='Skip module updates.',
                 required=False, default=None)),
+            (['--skip-vulnerabilities'], dict(action='store_true', help='Skip vulnerability database updates.',
+                required=False, default=None)),
             (['--update', '-u'], dict(action='store', help='Run update for only this module',
                 required=False, default=None)),
         ]
@@ -27,13 +30,13 @@ class Update(HumanBasePlugin):
         must_update = plugin.update_version_check()
         if must_update:
             new_vf = plugin.update_version()
-            with open(plugin.versions_file, 'w') as f:
-                new_xml = new_vf.str_pretty()
-                if self.is_valid(new_xml):
+            new_xml = new_vf.str_pretty()
+            if self.is_valid(new_xml):
+                with open(plugin.versions_file, 'w') as f:
                     f.write(new_xml)
-                else:
-                    self.msg('Prevented write of invalid XML %s' %
-                            new_xml)
+            else:
+                self.msg('Prevented write of invalid XML %s' %
+                        new_xml)
 
             self.msg('Updated %s.' % plugin_name)
 
@@ -64,12 +67,27 @@ class Update(HumanBasePlugin):
         else:
             self.msg('%s modules don\'t need updating.' % plugin_name.capitalize())
 
+    def update_vulnerabilities(self, plugin, plugin_name):
+        if not hasattr(plugin, 'update_vulnerabilities'):
+            return
+
+        self.msg("Updating vulnerability database for %s..." % plugin_name)
+        vulnerabilities = plugin.update_vulnerabilities()
+
+        with open(plugin.vulnerabilities_file, 'w') as f:
+            json.dump({'vulnerabilities': vulnerabilities}, f, indent=2, sort_keys=True)
+            f.write("\n")
+
+        self.msg("Wrote %s known vulnerabilities for %s." %
+                (len(vulnerabilities), plugin_name))
+
     @controller.expose(help='', hide=True)
     def default(self):
         plugins = pu.plugins_base_get()
 
         skip_version = self.app.pargs.skip_version
         skip_modules = self.app.pargs.skip_modules
+        skip_vulnerabilities = self.app.pargs.skip_vulnerabilities
         update_only = self.app.pargs.update
 
         for Plugin in plugins:
@@ -83,6 +101,8 @@ class Update(HumanBasePlugin):
                 self.update_version(plugin, plugin_name)
             if not skip_modules:
                 self.update_plugins(plugin, plugin_name)
+            if not skip_vulnerabilities:
+                self.update_vulnerabilities(plugin, plugin_name)
 
 def load(app=None):
     handler.register(Update)

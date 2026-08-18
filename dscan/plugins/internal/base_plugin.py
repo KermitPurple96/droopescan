@@ -17,6 +17,7 @@ class BasePlugin(BasePluginInternal):
     themes_file = None
 
     versions_file = None
+    vulnerabilities_file = None
 
     interesting_urls = None
 
@@ -32,4 +33,5 @@ class BasePlugin(BasePluginInternal):
         self.plugins_file = dscan.PWD + "plugins/%s/plugins.txt" % label
         self.themes_file = dscan.PWD + "plugins/%s/themes.txt" % label
         self.versions_file = dscan.PWD + "plugins/%s/versions.xml" % label
+        self.vulnerabilities_file = dscan.PWD + "plugins/%s/vulnerabilities.json" % label
 

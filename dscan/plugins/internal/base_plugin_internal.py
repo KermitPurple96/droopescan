@@ -9,6 +9,7 @@ from dscan.common import ScanningMethod, StandardOutput, JsonOutput, \
     VersionsFile, RequestsLogger
 from dscan.common import template, enum_list, dict_combine, base_url, file_len
 from dscan.common.output import ProgressBar
+from dscan.common.vulnerabilities import VulnerabilitiesFile
 from dscan import common
 from functools import partial
 from os.path import dirname
@@ -48,6 +49,7 @@ class BasePluginInternal(controller.CementBaseController):
     out = None
     session = None
     vf = None
+    vulnf = None
 
     class Meta:
         label = 'baseplugin'
@@ -191,6 +193,9 @@ class BasePluginInternal(controller.CementBaseController):
                     'headers': opts['headers']
                 }
             },
+            'vulnerabilities': {
+                'template': 'enumerate_vulnerabilities.mustache',
+            },
         }
 
         return all
@@ -208,7 +213,10 @@ class BasePluginInternal(controller.CementBaseController):
         elif opts['enumerate'] == 'i':
             enabled_functionality['interesting urls'] = functionality['interesting urls']
         elif opts['enumerate'] == 'a':
-            enabled_functionality = functionality
+            enabled_functionality = dict(functionality)
+            # Vulnerabilities are derived from 'version' results rather than
+            # being independently enumerable.
+            del enabled_functionality['vulnerabilities']
 
         if not self.can_enumerate_plugins and 'plugins' in enabled_functionality:
             del enabled_functionality['plugins']
@@ -253,6 +261,13 @@ class BasePluginInternal(controller.CementBaseController):
         is_cms_plugin = self._meta.label != "scan"
         if is_cms_plugin:
             self.vf = VersionsFile(self.versions_file)
+
+            self.vulnf = None
+            if self.vulnerabilities_file and os.path.isfile(self.vulnerabilities_file):
+                try:
+                    self.vulnf = VulnerabilitiesFile(self.vulnerabilities_file)
+                except (ValueError, IOError):
+                    self.vulnf = None
 
         # http://stackoverflow.com/questions/23632794/in-requests-library-how-can-i-avoid-httpconnectionpool-is-full-discarding-con
         try:
@@ -445,7 +460,33 @@ class BasePluginInternal(controller.CementBaseController):
 
             result[enumerate] = {'finds': finds, 'is_empty': is_empty}
 
+        if self.vulnf and 'version' in result and result['version']['finds']:
+            vuln_finds = self.vulnerabilities_format(result['version']['finds'])
+            result['vulnerabilities'] = {
+                'finds': vuln_finds,
+                'is_empty': len(vuln_finds) == 0,
+            }
+
         return result
+
+    def vulnerabilities_format(self, versions):
+        """
+        @param versions: a list of version strings, as returned by
+            enumerate_version.
+        @return: a list of human-readable strings describing known
+            vulnerabilities affecting any of the given versions.
+        """
+        formatted = []
+        for vuln in self.vulnf.for_versions(versions):
+            cves = (' (%s)' % ', '.join(vuln['cves'])) if vuln['cves'] else ''
+            summary = vuln['summary']
+            if len(summary) > 200:
+                summary = summary[:200].rsplit(' ', 1)[0] + '...'
+
+            formatted.append('%s%s - %s - %s' % (vuln['id'], cves,
+                summary, vuln['url']))
+
+        return formatted
 
     def _determine_redirect(self, url, verb, timeout=15, headers={}):
         """

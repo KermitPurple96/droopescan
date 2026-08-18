@@ -1,0 +1,9 @@
+{{#empty}}
+[+] No known vulnerabilities found for the identified version(s).
+{{/empty}}
+{{^empty}}
+{{red}}[+] Known vulnerabilities for the identified version(s):{{endc}}
+{{/empty}}
+{{#items}}
+    {{{.}}}
+{{/items}}

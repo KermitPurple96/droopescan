@@ -1,0 +1,2279 @@
+{
+  "vulnerabilities": [
+    {
+      "affected": [
+        {
+          "fixed": "7.3",
+          "introduced": "7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2011-2687"
+      ],
+      "id": "GHSA-96vx-qf28-6f8m",
+      "summary": "Drupal Access Control Bypass",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-2687"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.2.7",
+          "introduced": "8.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6379"
+      ],
+      "id": "GHSA-gxxq-fhc7-3jv9",
+      "summary": "Drupal Cross-Site Request Forgery (CSRF)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6379"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.6",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "11.0.5",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "10.2.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-45440"
+      ],
+      "id": "GHSA-mg8j-w93w-xjgc",
+      "summary": "Drupal Full Path Disclosure",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45440"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.2.7",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6381"
+      ],
+      "id": "GHSA-rhx9-3qf7-r3j7",
+      "summary": "Drupal Remote code execution",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6381"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.2.7",
+          "introduced": "8.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6377"
+      ],
+      "id": "GHSA-w7qx-vwr9-2j3r",
+      "summary": "Drupal editor module incorrectly checks access to inline private files",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-6377"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "6.38",
+          "introduced": "6.0"
+        },
+        {
+          "fixed": "7.43",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.0.4",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-3162",
+        "CVE-2016-3163",
+        "CVE-2016-3164",
+        "CVE-2016-3165",
+        "CVE-2016-3166",
+        "CVE-2016-3167",
+        "CVE-2016-3168",
+        "CVE-2016-3169",
+        "CVE-2016-3170",
+        "CVE-2016-3171"
+      ],
+      "id": "SA-CORE-2016-001",
+      "summary": "Drupal Form API ignores access restrictions on submit buttons",
+      "url": "https://www.drupal.org/sa-core-2016-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.44",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.1.3",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-6211",
+        "CVE-2016-6212"
+      ],
+      "id": "SA-CORE-2016-002",
+      "summary": "Drupal Saving user accounts can sometimes grant the user all roles",
+      "url": "https://www.drupal.org/sa-core-2016-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.1.7",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-5385"
+      ],
+      "id": "SA-CORE-2016-003",
+      "summary": "HTTP Proxy header vulnerability",
+      "url": "https://www.drupal.org/sa-core-2016-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.1.10",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.1.10",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-7570",
+        "CVE-2016-7571",
+        "CVE-2016-7572"
+      ],
+      "id": "SA-CORE-2016-004",
+      "summary": "Drupal Users without \"Administer comments\" can set comment visibility on nodes they can edit",
+      "url": "https://www.drupal.org/sa-core-2016-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.52",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.2.3",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2016-9449",
+        "CVE-2016-9450",
+        "CVE-2016-9451",
+        "CVE-2016-9452"
+      ],
+      "id": "SA-CORE-2016-005",
+      "summary": "Drupal Open Redirect",
+      "url": "https://www.drupal.org/sa-core-2016-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.2.8",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.3.1",
+          "introduced": "8.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6919"
+      ],
+      "id": "SA-CORE-2017-002",
+      "summary": "Drupal access control bypass vulnerability",
+      "url": "https://www.drupal.org/sa-core-2017-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.56",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.3.4",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6920",
+        "CVE-2017-6921",
+        "CVE-2017-6922"
+      ],
+      "id": "SA-CORE-2017-003",
+      "summary": "Drupal core access bypass vulnerability",
+      "url": "https://www.drupal.org/sa-core-2017-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.3.7",
+          "introduced": "8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2017-6923",
+        "CVE-2017-6924",
+        "CVE-2017-6925"
+      ],
+      "id": "SA-CORE-2017-004",
+      "summary": "Drupal Entity access bypass for entities that do not have UUIDs or have protected revisions",
+      "url": "https://www.drupal.org/sa-core-2017-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.57",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.4.0",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.4.5",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.4.5",
+          "introduced": "8.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2015-9251",
+        "CVE-2017-6926",
+        "CVE-2017-6927",
+        "CVE-2017-6928",
+        "CVE-2017-6929",
+        "CVE-2017-6930",
+        "CVE-2017-6931",
+        "CVE-2017-6932"
+      ],
+      "id": "SA-CORE-2018-001",
+      "summary": "Comment reply form allows access to restricted content - Critical - Drupal 8 - CVE-2017-6926; Drupal Comment reply form allows access to restricted content; Drupal access bypass vulnerability; Drupal cross-site scripting vulnerability; Drupal cross site scripting vulnerability",
+      "url": "https://www.drupal.org/sa-core-2018-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.58",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.3.9",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.3.9",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.4.6",
+          "introduced": "8.4.0"
+        },
+        {
+          "fixed": "8.5.1",
+          "introduced": "8.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-7600"
+      ],
+      "id": "SA-CORE-2018-002",
+      "summary": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result; Drupal Core Remote Code Execution Vulnerability",
+      "url": "https://www.drupal.org/sa-core-2018-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.4.7",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.4.7",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.5.2",
+          "introduced": "8.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-9861"
+      ],
+      "id": "SA-CORE-2018-003",
+      "summary": "CKEditor, a third-party JavaScript library included in Drupal core, has [fixed a cross-site scripting (XSS) vulnerability](https://ckeditor.com/blog/CKEditor-4.9.2-with-a-security-patch-released/). Th; Enhanced Image plugin for CKEditor is vulnerable to Cross-site scripting (XSS)",
+      "url": "https://www.drupal.org/sa-core-2018-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.59",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.4.8",
+          "introduced": "8.0"
+        },
+        {
+          "fixed": "8.4.8",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.5.3",
+          "introduced": "8.5"
+        },
+        {
+          "fixed": "8.5.3",
+          "introduced": "8.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2018-7602"
+      ],
+      "id": "SA-CORE-2018-004",
+      "summary": "A remote code execution vulnerability exists within multiple subsystems of Drupal 7.x and 8.x. This potentially allows attackers to exploit multiple attack vectors on a Drupal site, which could result; Drupal Core Remote Code Execution Vulnerability",
+      "url": "https://www.drupal.org/sa-core-2018-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.60",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "8.5.8",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.2",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2018-006",
+      "summary": "Drupal core Remote Code Execution",
+      "url": "https://www.drupal.org/sa-core-2018-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.5.9",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.6",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6338"
+      ],
+      "id": "SA-CORE-2019-001",
+      "summary": "Drupal core uses the third-party PEAR Archive\\_Tar library. This library has released a security update which impacts some Drupal configurations. Refer to [CVE-2018-1000888](https://nvd.nist.gov/vuln/",
+      "url": "https://www.drupal.org/sa-core-2019-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.62.0",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.5.9",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.6",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6339"
+      ],
+      "id": "SA-CORE-2019-002",
+      "summary": "A remote code execution vulnerability exists in PHP's built-in phar stream wrapper when performing file operations on an untrusted phar:// URI.; Arbitrary PHP code execution in Drupal",
+      "url": "https://www.drupal.org/sa-core-2019-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.62.0",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.5.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.10",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6340"
+      ],
+      "id": "SA-CORE-2019-003",
+      "summary": "Some field types do not properly sanitize data from non-form sources. This can lead to arbitrary PHP code execution in some cases.; Drupal Core Remote Code Execution Vulnerability",
+      "url": "https://www.drupal.org/sa-core-2019-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.65.0",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.5.14",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.13",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6341"
+      ],
+      "id": "SA-CORE-2019-004",
+      "summary": "Under certain circumstances the File module/subsystem allows a malicious user to upload a file that can trigger a cross-site scripting (XSS) vulnerability.; Drupal Cross Site Scripting (XSS) vulnerability",
+      "url": "https://www.drupal.org/sa-core-2019-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.5.15",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.15",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-10909",
+        "CVE-2019-10910",
+        "CVE-2019-10911"
+      ],
+      "id": "SA-CORE-2019-005",
+      "summary": "This security release fixes third-party dependencies included in or required by Drupal core.; Symfony Cross-site Scripting (XSS) vulnerability",
+      "url": "https://www.drupal.org/sa-core-2019-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.5.15",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.6.15",
+          "introduced": "8.6.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-11358"
+      ],
+      "id": "SA-CORE-2019-006",
+      "summary": "The jQuery project released version 3.4.0, and as part of that, disclosed a security vulnerability that affects all prior versions. As described in their [release notes](https://blog.jquery.com/2019/0",
+      "url": "https://www.drupal.org/sa-core-2019-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.67.0",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.6.16",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.7.1",
+          "introduced": "8.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2019-11831"
+      ],
+      "id": "SA-CORE-2019-007",
+      "summary": "This security release fixes third-party dependencies included in or required by Drupal core. As described in [TYPO3-PSA-2019-007: By-passing protection of Phar Stream Wrapper Interceptor](https://typo; Directory Traversal in typo3/phar-stream-wrapper",
+      "url": "https://www.drupal.org/sa-core-2019-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.5",
+          "introduced": "8.7.4"
+        }
+      ],
+      "cves": [
+        "CVE-2019-6342"
+      ],
+      "id": "SA-CORE-2019-008",
+      "summary": "In Drupal 8.7.4, when the [experimental](https://www.drupal.org/core/experimental#beta) Workspaces module is enabled, an access bypass condition is created.; Drupal Improper Access Control",
+      "url": "https://www.drupal.org/sa-core-2019-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.1",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2019-009",
+      "summary": "A visit to `install.php` can cause cached data to become corrupted. This could cause a site to be impaired until caches are rebuilt.; Drupal core Denial of Service",
+      "url": "https://www.drupal.org/sa-core-2019-009"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.1",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2019-010",
+      "summary": "Drupal 8 core's `file_save_upload()` function does not strip the leading and trailing dot ('.') from filenames, like Drupal 7 did.; Drupal core unrestricted file upload",
+      "url": "https://www.drupal.org/sa-core-2019-010"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.1",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2019-011",
+      "summary": "The Media Library module has a security vulnerability whereby it doesn't sufficiently restrict access to media items in certain configurations.; Drupal core Access bypass",
+      "url": "https://www.drupal.org/sa-core-2019-011"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.69",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.7.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.1",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2019-012",
+      "summary": "The Drupal project uses the third-party library [Archive\\_Tar](https://pear.php.net/package/Archive_Tar/), which has released a security improvement that is needed to protect some Drupal configuration; Drupal core Multiple vulnerabilities due to the use of the third-party library Archive_Tar",
+      "url": "https://www.drupal.org/sa-core-2019-012"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.12",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.4",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2020-001",
+      "summary": "The Drupal project uses the third-party library [CKEditor](https://github.com/ckeditor/ckeditor4), which has released a [security improvement](https://ckeditor.com/blog/CKEditor-4.14-with-Paste-from-L; Drupal core uses a vulnerable Third-party library CKEditor",
+      "url": "https://www.drupal.org/sa-core-2020-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.7.14",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.6",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-11022",
+        "CVE-2020-11023"
+      ],
+      "id": "SA-CORE-2020-002",
+      "summary": "The jQuery project released version 3.5.0, and as part of that, disclosed two security vulnerabilities that affect all prior versions. As mentioned in the [jQuery blog](https://blog.jquery.com/2020/05",
+      "url": "https://www.drupal.org/sa-core-2020-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.70",
+          "introduced": "7.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13662"
+      ],
+      "id": "SA-CORE-2020-003",
+      "summary": "Drupal core Open Redirect vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.72",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.8.8",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.9.1",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.1",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13663"
+      ],
+      "id": "SA-CORE-2020-004",
+      "summary": "The Drupal core Form API does not properly handle certain form input from cross-site requests, which can lead to other vulnerabilities.; Drupal Core Cross-Site Request Forgery (CSRF) vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.8",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.8",
+          "introduced": "8.8.0"
+        },
+        {
+          "fixed": "8.9.1",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.1",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13664"
+      ],
+      "id": "SA-CORE-2020-005",
+      "summary": "Drupal 8 and 9 have a remote code execution vulnerability under certain circumstances.; Drupal Core Arbitrary PHP code execution vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.8",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.8",
+          "introduced": "8.8.0"
+        },
+        {
+          "fixed": "8.9.1",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.1",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13665",
+        "CVE-2020-13665 "
+      ],
+      "id": "SA-CORE-2020-006",
+      "summary": "JSON:API PATCH requests may bypass validation for certain fields.; Drupal Core Access bypass vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.73",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.8.0"
+        },
+        {
+          "fixed": "8.9.6",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.6",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13666"
+      ],
+      "id": "SA-CORE-2020-007",
+      "summary": "The Drupal AJAX API does not disable JSONP by default, which can lead to cross-site scripting.; Drupal Core Cross-site scripting vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.8.0"
+        },
+        {
+          "fixed": "8.9.6",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.6",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13667"
+      ],
+      "id": "SA-CORE-2020-008",
+      "summary": "The experimental Workspaces module allows you to create multiple workspaces on your site in which draft content can be edited before being published to the live workspace.; Drupal Core Access bypass vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.8.0"
+        },
+        {
+          "fixed": "8.9.6",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.6",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13668",
+        "CVE-2020-13688"
+      ],
+      "id": "SA-CORE-2020-009",
+      "summary": "Drupal 8 and 9 have a reflected cross-site scripting (XSS) vulnerability under certain circumstances.; Cross-site Scripting in Drupal Core; Drupal Core Cross-site scripting vulnerability",
+      "url": "https://www.drupal.org/sa-core-2020-009"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.9.6",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.6",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13669"
+      ],
+      "id": "SA-CORE-2020-010",
+      "summary": "Drupal core's built-in CKEditor image caption functionality is vulnerable to XSS.; Drupal core Cross-site Scripting (XSS) vulnerability in ckeditor",
+      "url": "https://www.drupal.org/sa-core-2020-010"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.8.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.9.6",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.6",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13670"
+      ],
+      "id": "SA-CORE-2020-011",
+      "summary": "A vulnerability exists in the File module which allows an attacker to gain access to the file metadata of a permanent private file that they do not have access to by guessing the ID of the file.; Exposure of Resource to Wrong Sphere in Drupal Core",
+      "url": "https://www.drupal.org/sa-core-2020-011"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.74",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.8.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.9.9",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.8",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13671"
+      ],
+      "id": "SA-CORE-2020-012",
+      "summary": "*Update November 18: Documented longer list of dangerous file extensions*; Drupal core Unrestricted Upload of File with Dangerous Type",
+      "url": "https://www.drupal.org/sa-core-2020-012"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.75",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.8.12",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "8.9.10",
+          "introduced": "8.9.0"
+        },
+        {
+          "fixed": "9.0.9",
+          "introduced": "9.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-28948",
+        "CVE-2020-28949"
+      ],
+      "id": "SA-CORE-2020-013",
+      "summary": "The Drupal project uses the PEAR Archive\\_Tar library. The PEAR Archive\\_Tar library has released a security update that impacts Drupal. For more information please see:; Drupal core Arbitrary PHP code execution",
+      "url": "https://www.drupal.org/sa-core-2020-013"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.13",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.0.11",
+          "introduced": "9.0.0"
+        },
+        {
+          "fixed": "9.1.3",
+          "introduced": "9.1.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-36193"
+      ],
+      "id": "SA-CORE-2021-001",
+      "summary": "The Drupal project uses the pear Archive\\_Tar library, which has released a security update that impacts Drupal. For more information please see:",
+      "url": "https://www.drupal.org/sa-core-2021-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.80",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.9.14",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.0.12",
+          "introduced": "9.0.0"
+        },
+        {
+          "fixed": "9.1.7",
+          "introduced": "9.1.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13672"
+      ],
+      "id": "SA-CORE-2021-002",
+      "summary": "Drupal core's sanitization API fails to properly filter cross-site scripting under certain circumstances.; Drupal core Cross-site Scripting (XSS) vulnerability",
+      "url": "https://www.drupal.org/sa-core-2021-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.80",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "8.9.16",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.0.14",
+          "introduced": "9.0.0"
+        },
+        {
+          "fixed": "9.1.9",
+          "introduced": "9.1.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-33829"
+      ],
+      "id": "SA-CORE-2021-003",
+      "summary": "**Update: 2021-06-11: Added CVE-2021-33829 identifier**; ckeditor4 vulnerable to cross-site scripting",
+      "url": "https://www.drupal.org/sa-core-2021-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.17",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.11",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.2",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-32610"
+      ],
+      "id": "SA-CORE-2021-004",
+      "summary": "The Drupal project uses the pear Archive\\_Tar library, which has released a security update that impacts Drupal.",
+      "url": "https://www.drupal.org/sa-core-2021-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.18",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.12",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.4",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2021-005",
+      "summary": "The Drupal project uses the [CKEditor](https://github.com/ckeditor/ckeditor4), library for WYSIWYG editing. CKEditor has released [a security update that impacts Drupal](https://ckeditor.com/blog/cked; Drupal core Cross-Site Scripting (XSS) vulnerabilities",
+      "url": "https://www.drupal.org/sa-core-2021-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.13",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.6",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13673"
+      ],
+      "id": "SA-CORE-2021-006",
+      "summary": "The Drupal core Media module allows embedding internal and external media in content fields. In certain circumstances, the filter could allow an unprivileged user to inject HTML into a page when it is",
+      "url": "https://www.drupal.org/sa-core-2021-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.13",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.6",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13674"
+      ],
+      "id": "SA-CORE-2021-007",
+      "summary": "The QuickEdit module does not properly validate access to routes, which could allow cross-site request forgery under some circumstances and lead to possible data integrity issues.; Cross-Site Request Forgery in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2021-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.13",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.6",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13675"
+      ],
+      "id": "SA-CORE-2021-008",
+      "summary": "Drupal's JSON:API and REST/File modules allow file uploads through their HTTP APIs. The modules do not correctly run all file validation, which causes an access bypass vulnerability. An attacker might; Unrestricted Upload of File with Dangerous Type in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2021-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.13",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.6",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13676"
+      ],
+      "id": "SA-CORE-2021-009",
+      "summary": "The QuickEdit module does not properly check access to fields in some circumstances, which can lead to unintended disclosure of field data.; Incorrect Authorization in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2021-009"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.13",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.6",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2020-13677"
+      ],
+      "id": "SA-CORE-2021-010",
+      "summary": "Under some circumstances, the Drupal core JSON:API module does not properly restrict access to certain content, which may result in unintended access bypass.; Drupal core access bypass vulnerability",
+      "url": "https://www.drupal.org/sa-core-2021-010"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "8.9.20",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.1.14",
+          "introduced": "9.1.0"
+        },
+        {
+          "fixed": "9.2.9",
+          "introduced": "9.2.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-41164",
+        "CVE-2021-41165"
+      ],
+      "id": "SA-CORE-2021-011",
+      "summary": "The Drupal project uses the [CKEditor](https://github.com/ckeditor/ckeditor4) library for WYSIWYG editing. CKEditor has released [a security update that impacts Drupal](https://ckeditor.com/cke4/relea",
+      "url": "https://www.drupal.org/sa-core-2021-011"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.3",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2021-41184"
+      ],
+      "id": "SA-CORE-2022-001",
+      "summary": "jQuery UI is a third-party library used by Drupal. This library was previously thought to be end-of-life.",
+      "url": "https://www.drupal.org/sa-core-2022-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.88",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "9.2.13",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.6",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25271"
+      ],
+      "id": "SA-CORE-2022-003",
+      "summary": "Drupal core's form API has a vulnerability where certain contributed or custom modules' forms may be vulnerable to improper input validation. This could allow an attacker to inject disallowed values o; Improper input validation in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2022-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.13",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.6",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25270"
+      ],
+      "id": "SA-CORE-2022-004",
+      "summary": "The Quick Edit module does not properly check entity access in some circumstances. This could result in users with the \"access in-place editing\" permission viewing some content they are are not author; Incorrect authorization in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2022-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.15",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.8",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-24728",
+        "CVE-2022-24729"
+      ],
+      "id": "SA-CORE-2022-005",
+      "summary": "The Drupal project uses the [CKEditor](https://github.com/ckeditor/ckeditor4) library for WYSIWYG editing. CKEditor has released [a security update that impacts Drupal](https://ckeditor.com/blog/ckedi",
+      "url": "https://www.drupal.org/sa-core-2022-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.16",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.9",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-24775"
+      ],
+      "id": "SA-CORE-2022-006",
+      "summary": "Drupal uses the third-party Guzzle library for handling HTTP requests and responses to external services. [Guzzle has released a security update](https://github.com/guzzle/psr7/security/advisories/GHS",
+      "url": "https://www.drupal.org/sa-core-2022-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.18",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.12",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25273"
+      ],
+      "id": "SA-CORE-2022-008",
+      "summary": "Drupal core's form API has a vulnerability where certain contributed or custom modules' forms may be vulnerable to improper input validation. This could allow an attacker to inject disallowed values o; Improper input validation in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2022-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.3.12",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25274"
+      ],
+      "id": "SA-CORE-2022-009",
+      "summary": "Drupal 9.3 implemented a generic entity access API for entity revisions. However, this API was not completely integrated with existing permissions, resulting in some possible access bypass for users w; Access bypass in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2022-009"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.20",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.14",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-29248"
+      ],
+      "id": "SA-CORE-2022-010",
+      "summary": "Drupal uses the third-party Guzzle library for handling HTTP requests and responses to external services. [Guzzle has released a security update](https://github.com/guzzle/guzzle/security/advisories/G",
+      "url": "https://www.drupal.org/sa-core-2022-010"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.2.21",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.3.16",
+          "introduced": "9.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-31042",
+        "CVE-2022-31043"
+      ],
+      "id": "SA-CORE-2022-011",
+      "summary": "*Updated 22:00 UTC 2022-06-10: Added steps to update without `drupal/core-recommended`.*",
+      "url": "https://www.drupal.org/sa-core-2022-011"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "7.91",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "9.3.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.3",
+          "introduced": "9.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25275"
+      ],
+      "id": "SA-CORE-2022-012",
+      "summary": "In some situations, the Image module does not correctly check access to image files not stored in the standard public files directory when generating derivative images using the image styles system.; Drupal core Information Disclosure vulnerability",
+      "url": "https://www.drupal.org/sa-core-2022-012"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.3.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.3",
+          "introduced": "9.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25278"
+      ],
+      "id": "SA-CORE-2022-013",
+      "summary": "Under certain circumstances, the Drupal core form API evaluates form element access incorrectly. This may lead to a user being able to alter data they should not have access to.; Access bypass in Drupal Core",
+      "url": "https://www.drupal.org/sa-core-2022-013"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.3.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.3",
+          "introduced": "9.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25277"
+      ],
+      "id": "SA-CORE-2022-014",
+      "summary": "*Updated 2022-07-20 19:45 UTC to indicate that this only affects Apache web servers.*; Drupal core arbitrary PHP code execution",
+      "url": "https://www.drupal.org/sa-core-2022-014"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.3.19",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.3",
+          "introduced": "9.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-25276"
+      ],
+      "id": "SA-CORE-2022-015",
+      "summary": "The Media oEmbed iframe route does not properly validate the iframe domain setting, which allows embeds to be displayed in the context of the primary domain. Under certain circumstances, this could le; Lack of domain validation in Druple core",
+      "url": "https://www.drupal.org/sa-core-2022-015"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "9.3.22",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.7",
+          "introduced": "9.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2022-39261"
+      ],
+      "id": "SA-CORE-2022-016",
+      "summary": "Drupal uses the [Twig](https://twig.symfony.com/) third-party library for content templating and sanitization. [Twig has released a security update](https://symfony.com/blog/twig-security-release-poss",
+      "url": "https://www.drupal.org/sa-core-2022-016"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.2",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "9.4.10",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.5.2",
+          "introduced": "9.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2023-001",
+      "summary": "The Media Library module does not properly check entity access in some circumstances. This may result in users with access to edit content seeing metadata about media items they are not authorized to ",
+      "url": "https://www.drupal.org/sa-core-2023-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.5",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "9.4.12",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.5.5",
+          "introduced": "9.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2023-002",
+      "summary": "The Media module does not properly check entity access in some circumstances. This may result in users seeing thumbnails of media items they do not have access to, including for private files.",
+      "url": "https://www.drupal.org/sa-core-2023-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.5",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "9.4.12",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.5.5",
+          "introduced": "9.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2023-003",
+      "summary": "The language module provides a Language switcher block which can be placed to provide links to quickly switch between different languages.",
+      "url": "https://www.drupal.org/sa-core-2023-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.5",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "9.4.12",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.5.5",
+          "introduced": "9.5.0"
+        }
+      ],
+      "cves": [],
+      "id": "SA-CORE-2023-004",
+      "summary": "Drupal core provides a page that outputs the markup from `phpinfo()` to assist with diagnosing PHP configuration.",
+      "url": "https://www.drupal.org/sa-core-2023-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.8",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "7.96",
+          "introduced": "7.0.0"
+        },
+        {
+          "fixed": "9.4.14",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "9.4.14",
+          "introduced": "9.0.0"
+        },
+        {
+          "fixed": "9.5.8",
+          "introduced": "9.5.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-31250"
+      ],
+      "id": "SA-CORE-2023-005",
+      "summary": "Drupal 7; Access bypass in Drupal core",
+      "url": "https://www.drupal.org/sa-core-2023-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.0.11",
+          "introduced": "10.0.0"
+        },
+        {
+          "fixed": "10.1.4",
+          "introduced": "10.1.0"
+        },
+        {
+          "fixed": "9.5.11",
+          "introduced": "8.7.0"
+        }
+      ],
+      "cves": [
+        "CVE-2023-5256"
+      ],
+      "id": "SA-CORE-2023-006",
+      "summary": "In certain scenarios, Drupal's JSON:API module will output error backtraces. With some configurations, this may cause sensitive information to be cached and made available to anonymous users, leading ; Cache poisoning in drupal/core",
+      "url": "https://www.drupal.org/sa-core-2023-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.1.8",
+          "introduced": "10.1.0"
+        },
+        {
+          "fixed": "10.2.2",
+          "introduced": "10.2.0"
+        },
+        {
+          "fixed": "10.1.8",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-11941"
+      ],
+      "id": "SA-CORE-2024-001",
+      "summary": "The Comment module allows users to reply to comments. In certain cases, an attacker could make comment reply requests that would trigger a denial of service (DOS).; Drupal core Denial of Service vulnerability; Drupal core Denial of Service",
+      "url": "https://www.drupal.org/sa-core-2024-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.2.10",
+          "introduced": "10.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-11942"
+      ],
+      "id": "SA-CORE-2024-002",
+      "summary": "Under certain uncommon site configurations, a bug in the CKEditor 5 module can cause some image uploads to move the entire webroot to a different location on the file system. This could be exploited b; Drupal core vulnerable to improper error handling",
+      "url": "https://www.drupal.org/sa-core-2024-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.9",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "11.0.8",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-12393"
+      ],
+      "id": "SA-CORE-2024-003",
+      "summary": "Drupal uses JavaScript to render status messages in some cases and configurations. In certain situations, the status messages are not adequately sanitized.; Drupal Core Cross-Site Scripting (XSS)",
+      "url": "https://www.drupal.org/sa-core-2024-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.9",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "11.0.8",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-55634"
+      ],
+      "id": "SA-CORE-2024-004",
+      "summary": "Drupal's uniqueness checking for certain user fields is inconsistent depending on the database engine and its collation.; Drupal core Access bypass",
+      "url": "https://www.drupal.org/sa-core-2024-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.9",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "11.0.8",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-55636"
+      ],
+      "id": "SA-CORE-2024-006",
+      "summary": "Drupal core contains a potential PHP Object Injection vulnerability that (if combined with another exploit) could lead to Artbitrary File Deletion. It is not directly exploitable.; Drupal core contains a potential PHP Object Injection vulnerability",
+      "url": "https://www.drupal.org/sa-core-2024-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.9",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "11.0.8",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-55637"
+      ],
+      "id": "SA-CORE-2024-007",
+      "summary": "Drupal core contains a potential PHP Object Injection vulnerability that (if combined with another exploit) could lead to Remote Code Execution. It is not directly exploitable.; Drupal core contains a potential PHP Object Injection vulnerability",
+      "url": "https://www.drupal.org/sa-core-2024-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.3.9",
+          "introduced": "10.3.0"
+        },
+        {
+          "fixed": "7.102",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.0.0"
+        },
+        {
+          "fixed": "10.2.11",
+          "introduced": "8.8.0"
+        }
+      ],
+      "cves": [
+        "CVE-2024-55638"
+      ],
+      "id": "SA-CORE-2024-008",
+      "summary": "Drupal core contains a potential PHP Object Injection vulnerability that (if combined with another exploit) could lead to Remote Code Execution. It is not directly exploitable.; Drupal core contains a potential PHP Object Injection vulnerability",
+      "url": "https://www.drupal.org/sa-core-2024-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.4.3",
+          "introduced": "10.4.0"
+        },
+        {
+          "fixed": "11.0.12",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.1.3",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "10.3.13",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-3057"
+      ],
+      "id": "SA-CORE-2025-001",
+      "summary": "Drupal core doesn't sufficiently filter error messages under certain circumstances, leading to a reflected Cross Site Scripting vulnerability (XSS).; Drupal Core Potential Cross-Site Scripting (XSS) via Error Messages",
+      "url": "https://www.drupal.org/sa-core-2025-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.4.3",
+          "introduced": "10.4.0"
+        },
+        {
+          "fixed": "11.0.12",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.1.3",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "10.3.13",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-31673"
+      ],
+      "id": "SA-CORE-2025-002",
+      "summary": "Bulk operations allow authorized users to modify several nodes at once from the Content page (`/admin/content`). A site builder can also add bulk operations to other pages using Views.; Drupal Core Vulnerable to Forceful Browsing",
+      "url": "https://www.drupal.org/sa-core-2025-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.4.3",
+          "introduced": "10.4.0"
+        },
+        {
+          "fixed": "11.0.12",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.1.3",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "10.3.13",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-31674"
+      ],
+      "id": "SA-CORE-2025-003",
+      "summary": "Drupal core contains a potential PHP Object Injection vulnerability that (if combined with another exploit) could lead to Arbitrary File Inclusion. Techniques exist to escalate this attack to Remote C; Drupal Core Improperly Controlled Modification of Dynamically-Determined Object Attributes Vulnerability",
+      "url": "https://www.drupal.org/sa-core-2025-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.4.5",
+          "introduced": "10.4.0"
+        },
+        {
+          "fixed": "11.0.13",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.1.5",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "10.3.14",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-31675"
+      ],
+      "id": "SA-CORE-2025-004",
+      "summary": "Drupal core Link field attributes are not sufficiently sanitized, which can lead to a Cross Site Scripting vulnerability (XSS).; Drupal Core Cross-Site Scripting (XSS) Vulnerability",
+      "url": "https://www.drupal.org/sa-core-2025-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.6",
+          "introduced": "10.5.0"
+        },
+        {
+          "fixed": "11.1.9",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.8",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "10.4.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-13080"
+      ],
+      "id": "SA-CORE-2025-005",
+      "summary": "Drupal Core has a rarely used feature, provided by an underlying library, which allows certain attributes of incoming HTTP requests to be overridden.; Drupal core allows Forceful Browsing",
+      "url": "https://www.drupal.org/sa-core-2025-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.6",
+          "introduced": "10.5.0"
+        },
+        {
+          "fixed": "11.1.9",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.8",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "10.4.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-13081"
+      ],
+      "id": "SA-CORE-2025-006",
+      "summary": "Drupal core contains a chain of methods that is exploitable when an insecure deserialization vulnerability exists on the site. This so-called \"gadget chain\" presents no direct threat, but is a vector ; Drupal core allows Object Injection",
+      "url": "https://www.drupal.org/sa-core-2025-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.6",
+          "introduced": "10.5.0"
+        },
+        {
+          "fixed": "11.1.9",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.8",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "10.4.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-13082"
+      ],
+      "id": "SA-CORE-2025-007",
+      "summary": "By generating and tricking a user into visiting a malicious URL, an attacker can perform site defacement.; Drupal core allows Content Spoofing",
+      "url": "https://www.drupal.org/sa-core-2025-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.6",
+          "introduced": "10.5.0"
+        },
+        {
+          "fixed": "11.1.9",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.8",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "7.103",
+          "introduced": "7.0"
+        },
+        {
+          "fixed": "10.4.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2025-13083"
+      ],
+      "id": "SA-CORE-2025-008",
+      "summary": "The core `system` module handles downloads of private and temporary files. Contrib modules can define additional kinds of files (schemes) that may also be handled by the `system` module.; Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels",
+      "url": "https://www.drupal.org/sa-core-2025-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.6.7",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.2.11",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.3.7",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "10.5.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-6365"
+      ],
+      "id": "SA-CORE-2026-001",
+      "summary": "Drupal core's jQuery integration for AJAX modal dialog boxes does not sufficiently sanitize certain options, which can lead to a cross-site scripting (XSS) vulnerability.; Drupal core is Vulnerable to Cross-Site Scripting",
+      "url": "https://www.drupal.org/sa-core-2026-001"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.6.7",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.2.11",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.3.7",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "10.5.9",
+          "introduced": "8.0.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-6366"
+      ],
+      "id": "SA-CORE-2026-002",
+      "summary": "Drupal core contains a chain of methods that could be exploitable when an insecure deserialization vulnerability exists on the site. This so-called \"gadget chain\" presents no direct threat, but is a v; Drupal core allows Object Injection",
+      "url": "https://www.drupal.org/sa-core-2026-002"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "11.3.7",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-6367"
+      ],
+      "id": "SA-CORE-2026-003",
+      "summary": "Drupal 11.3 comes with support for completing entity suggestions whilst adding a link to CKEditor 5.; Drupal core allows Cross-Site Scripting (XSS)",
+      "url": "https://www.drupal.org/sa-core-2026-003"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.10",
+          "introduced": "10.5.0"
+        },
+        {
+          "fixed": "10.6.9",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.10",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.12",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.10",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "10.4.10",
+          "introduced": "8.9.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-9082"
+      ],
+      "id": "SA-CORE-2026-004",
+      "summary": "Drupal core includes a database abstraction API to ensure that queries executed against the database are sanitized to prevent SQL injection attacks.; Drupal Core has a SQL Injection issue",
+      "url": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.12",
+          "introduced": null
+        },
+        {
+          "fixed": "10.6.11",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.2.14",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.12",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55803"
+      ],
+      "id": "SA-CORE-2026-005",
+      "summary": "Drupal Steward protection:",
+      "url": "https://www.drupal.org/sa-core-2026-005"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.12",
+          "introduced": null
+        },
+        {
+          "fixed": "10.6.11",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.2.14",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.12",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55804"
+      ],
+      "id": "SA-CORE-2026-006",
+      "summary": "Drupal core contains a chain of methods that could be exploitable when an insecure deserialization vulnerability exists on the site. This so-called \"gadget chain\" presents no direct threat, but is a v",
+      "url": "https://www.drupal.org/sa-core-2026-006"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.12",
+          "introduced": null
+        },
+        {
+          "fixed": "10.6.11",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.2.14",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.12",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55806"
+      ],
+      "id": "SA-CORE-2026-007",
+      "summary": "Drupal core ships a `rebuild.php` front controller that can be used to rebuild Drupal (clearing the caches and rebuilding the container) when the site is in an unexpected condition.",
+      "url": "https://www.drupal.org/sa-core-2026-007"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.12",
+          "introduced": null
+        },
+        {
+          "fixed": "10.6.11",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.2.14",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.12",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55807"
+      ],
+      "id": "SA-CORE-2026-008",
+      "summary": "The Media module comes with support for oEmbed. The oEmbed specification contains two discovery mechanisms, via `providers.json` and via URL discovery.",
+      "url": "https://www.drupal.org/sa-core-2026-008"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.5.12",
+          "introduced": null
+        },
+        {
+          "fixed": "10.6.11",
+          "introduced": "10.6.0"
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.2.14",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.12",
+          "introduced": "11.3.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55808"
+      ],
+      "id": "SA-CORE-2026-009",
+      "summary": "The JSON:API and REST modules allow you to upload image files to image fields.",
+      "url": "https://www.drupal.org/sa-core-2026-009"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.6.13",
+          "introduced": null
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.3.0",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.14",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "11.4.4",
+          "introduced": "11.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-15916"
+      ],
+      "id": "SA-CORE-2026-010",
+      "summary": "The Image module allows you to define and configure image fields.",
+      "url": "https://www.drupal.org/sa-core-2026-010"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "11.3.0",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.14",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "11.4.4",
+          "introduced": "11.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-15917"
+      ],
+      "id": "SA-CORE-2026-011",
+      "summary": "Drupal core 11.2 and above integrate the HTMX JavaScript library.",
+      "url": "https://www.drupal.org/sa-core-2026-011"
+    },
+    {
+      "affected": [
+        {
+          "fixed": "10.6.13",
+          "introduced": null
+        },
+        {
+          "fixed": "11.1.0",
+          "introduced": "11.0.0"
+        },
+        {
+          "fixed": "11.2.0",
+          "introduced": "11.1.0"
+        },
+        {
+          "fixed": "11.3.0",
+          "introduced": "11.2.0"
+        },
+        {
+          "fixed": "11.3.14",
+          "introduced": "11.3.0"
+        },
+        {
+          "fixed": "11.4.4",
+          "introduced": "11.4.0"
+        }
+      ],
+      "cves": [
+        "CVE-2026-55805"
+      ],
+      "id": "SA-CORE-2026-012",
+      "summary": "The Layout Builder module doesn't sufficiently sanitize block labels in certain scenarios, which can lead to a cross-site scripting (XSS) vulnerability.",
+      "url": "https://www.drupal.org/sa-core-2026-012"
+    }
+  ]
+}

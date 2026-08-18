@@ -14,16 +14,164 @@ import dscan.common.versions as v
 import json
 import os
 import os.path
+import re
 import requests
 import subprocess
 
+from collections import defaultdict
+
 GH = 'https://github.com/'
 UW = './.update-workspace/'
+OSV_API = 'https://api.osv.dev/v1/query'
+
+def github_tags_get(github_repo):
+    """
+    Get all tag names from a github repository using `git ls-remote`, which
+    does not require cloning the repository or scraping the (frequently
+    changing) tags webpage.
+    @param github_repo: the github repository, e.g. 'drupal/drupal/'.
+    @return: a list of tag names.
+    """
+    github_repo = _github_normalize(github_repo)
+    repo_url = '%s%s' % (GH, github_repo)
+
+    output = subprocess.check_output(['git', 'ls-remote', '--tags', repo_url])
+    if isinstance(output, bytes):
+        output = output.decode()
+
+    tags = []
+    for line in output.split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+
+        ref = line.split('\t')[-1]
+        if not ref.startswith('refs/tags/'):
+            continue
+
+        tag = ref[len('refs/tags/'):]
+        if tag.endswith('^{}'):
+            tag = tag[:-len('^{}')]
+
+        tags.append(tag)
+
+    return tags
+
+def _osv_summary(vuln):
+    if vuln.get('summary'):
+        return vuln['summary'].strip()
+
+    details = vuln.get('details', '')
+    header = re.search(r'^####\s*(.+)$', details, re.M)
+    if header:
+        return header.group(1).strip()
+
+    return details.strip().split('\n')[0][:200]
+
+def _osv_sa_id(vuln):
+    for ref in vuln.get('references', []):
+        match = re.search(r'/(sa-core-[\w-]+)', ref.get('url', ''), re.I)
+        if match:
+            return match.group(1).upper()
+
+    return None
+
+def _osv_cves(vuln):
+    aliases = sorted(set(a for a in vuln.get('aliases', []) if a.startswith('CVE-')))
+    if aliases:
+        return aliases
+
+    return sorted(set(re.findall(r'CVE-\d{4}-\d+', vuln.get('details', ''))))
+
+def _osv_fallback_url(vuln):
+    for ref in vuln.get('references', []):
+        if ref.get('type') == 'ADVISORY':
+            return ref['url']
+
+    if vuln.get('references'):
+        return vuln['references'][0]['url']
+
+    return 'https://osv.dev/vulnerability/' + vuln['id']
+
+def _osv_affected_ranges(vuln, package_name):
+    ranges = set()
+    for affected in vuln.get('affected', []):
+        if affected.get('package', {}).get('name') != package_name:
+            continue
+
+        for rng in affected.get('ranges', []):
+            introduced = None
+            fixed = None
+            for event in rng.get('events', []):
+                if 'introduced' in event and event['introduced'] != '0':
+                    introduced = event['introduced']
+                if 'fixed' in event:
+                    fixed = event['fixed']
+
+            ranges.add((introduced, fixed))
+
+    return ranges
+
+def osv_vulnerabilities_get(package_name, ecosystem='Packagist'):
+    """
+    Fetches known vulnerabilities for a package from OSV.dev
+    (https://osv.dev), normalises them and merges records which refer to the
+    same upstream advisory (OSV frequently splits a single advisory into one
+    bundling record plus one record per CVE).
+    @param package_name: the package name as known to the ecosystem, e.g.
+        'drupal/core'.
+    @param ecosystem: the OSV ecosystem the package belongs to.
+    @return: a list of dicts, each with keys 'id' (advisory id), 'summary',
+        'cves' (list), 'url' and 'affected' (list of {'introduced', 'fixed'}).
+    """
+    resp = requests.post(OSV_API, json={
+        'package': {'name': package_name, 'ecosystem': ecosystem}
+    })
+    resp.raise_for_status()
+    vulns = resp.json().get('vulns', [])
+
+    groups = defaultdict(list)
+    for vuln in vulns:
+        key = _osv_sa_id(vuln) or vuln['id']
+        groups[key].append(vuln)
+
+    merged = []
+    for key, group in groups.items():
+        ranges = set()
+        cves = set()
+        summaries = []
+        for vuln in group:
+            ranges |= _osv_affected_ranges(vuln, package_name)
+            cves |= set(_osv_cves(vuln))
+            summary = _osv_summary(vuln)
+            if summary and summary not in summaries:
+                summaries.append(summary)
+
+        if not ranges:
+            continue
+
+        is_sa = key.startswith('SA-CORE')
+        primary = next((vuln for vuln in group if vuln['id'].startswith('DRUPAL-CORE')), group[0])
+        summary = _osv_summary(primary)
+        if len(summaries) > 1 and not primary.get('summary'):
+            summary = '; '.join(summaries[:5])
+
+        merged.append({
+            'id': key,
+            'summary': summary,
+            'cves': sorted(cves),
+            'url': ('https://www.drupal.org/' + key.lower()) if is_sa
+                else _osv_fallback_url(group[0]),
+            'affected': [{'introduced': introduced, 'fixed': fixed}
+                for introduced, fixed in sorted(ranges, key=lambda t: (t[0] or '', t[1] or ''))],
+        })
+
+    merged.sort(key=lambda vuln: vuln['id'])
+    return merged
 
 def github_tags_newer(github_repo, versions_file, update_majors):
     """
-    Get new tags from a github repository. Cannot use github API because it
-    doesn't support chronological ordering of tags.
+    Get new tags from a github repository.
     @param github_repo: the github repository, e.g. 'drupal/drupal/'.
     @param versions_file: the file path where the versions database can be found.
     @param update_majors: major versions to update. If you want to update
@@ -33,20 +181,10 @@ def github_tags_newer(github_repo, versions_file, update_majors):
     @raise MissingMajorException: A new version from a newer major branch is
         exists, but will not be downloaded due to it not being in majors.
     """
-    github_repo = _github_normalize(github_repo)
     vf = VersionsFile(versions_file)
     current_highest = vf.highest_version_major(update_majors)
 
-    tags_url = '%s%stags' % (GH, github_repo)
-    resp = requests.get(tags_url)
-    bs = BeautifulSoup(resp.text, 'lxml')
-
-    gh_versions = []
-    for header in bs.find_all('h4'):
-        tag = header.findChild('a')
-        if not tag:
-            continue # Ignore learn more header.
-        gh_versions.append(tag.text.strip())
+    gh_versions = github_tags_get(github_repo)
 
     newer = _newer_tags_get(current_highest, gh_versions)
 
@@ -358,6 +496,8 @@ class GitRepo():
         @return: a list with all tags in this repository.
         """
         tags_content = subprocess.check_output(['git', 'tag'], cwd=self.path)
+        if isinstance(tags_content, bytes):
+            tags_content = tags_content.decode()
         tags = []
         for line in tags_content.split('\n'):
             tag = line.strip()

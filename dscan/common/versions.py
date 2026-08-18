@@ -253,7 +253,7 @@ class VersionsFile():
 
     def str_pretty(self):
         self.indent(self.root)
-        return ET.tostring(self.root, encoding='utf-8')
+        return ET.tostring(self.root, encoding='unicode')
 
     def has_changelog(self):
         changelogs = self.root.findall(self.changelog_xpath)

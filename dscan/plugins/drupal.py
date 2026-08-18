@@ -19,7 +19,8 @@ class Drupal(BasePlugin):
     forbidden_url = "sites/"
     regular_file_url = ["misc/drupal.js", 'core/misc/drupal.js']
     module_common_file = "LICENSE.txt"
-    update_majors = ['6','7','8', '9']
+    update_majors = ['6','7','8', '9', '10', '11']
+    vulnerabilities_package = 'drupal/core'
 
     interesting_urls = [
             ("CHANGELOG.txt", "Default changelog file"),
@@ -67,6 +68,13 @@ class Drupal(BasePlugin):
 
         versions_file.update(hashes)
         return versions_file
+
+    def update_vulnerabilities(self):
+        """
+        @return: a list of known vulnerabilities, as returned by
+            ua.osv_vulnerabilities_get.
+        """
+        return ua.osv_vulnerabilities_get(self.vulnerabilities_package)
 
     def update_plugins_check(self):
         return ua.update_modules_check(self)

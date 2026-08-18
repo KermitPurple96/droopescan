@@ -1,5 +1,5 @@
 from __future__ import print_function
-from distutils.util import strtobool
+from dscan.common.functions import strtobool
 import dscan.common.functions as f
 import dscan
 import os.path
