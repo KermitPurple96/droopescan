@@ -428,6 +428,15 @@ class BasePluginInternal(controller.CementBaseController):
         if opts['follow_redirects']:
             url, host_header = self.determine_redirect(url, host_header, opts)
 
+        headers = self._generate_headers(host_header)
+        if not self.cms_identify(url, timeout=opts['timeout'], headers=headers):
+            discovered_url = self.discover_path(url, timeout=opts['timeout'],
+                    headers=headers)
+            if discovered_url:
+                self.out.echo("[+] '%s' not found at %s -- found at %s instead, scanning there." %
+                        (self._meta.label.capitalize(), url, discovered_url))
+                url = discovered_url
+
         need_sm = opts['enumerate'] in ['a', 'p', 't']
         if need_sm and (self.can_enumerate_plugins or self.can_enumerate_themes):
             scanning_method = opts['method']
@@ -989,6 +998,32 @@ class BasePluginInternal(controller.CementBaseController):
                 break
 
         return is_cms
+
+    def discover_path(self, url, timeout=15, headers={}):
+        """
+        Called when this CMS could not be identified at the exact URL given.
+        Tries a short list of common installation subdirectories (e.g. a
+        Joomla site installed under /joomla/ rather than at the webroot)
+        before giving up.
+        @param url: the base URL that failed identification.
+        @param timeout: number of seconds before a timeout occurs on a http
+            connection.
+        @param headers: custom HTTP headers as expected by requests.
+        @return: the first candidate URL identified as this CMS, or None if
+            none of them were.
+        """
+        label = self._meta.label
+        candidates = [label + '/', 'cms/', 'site/']
+
+        for candidate in candidates:
+            candidate_url = url + candidate
+            try:
+                if self.cms_identify(candidate_url, timeout=timeout, headers=headers):
+                    return candidate_url
+            except Exception:
+                continue
+
+        return None
 
     def _process_host_line(self, line):
         return f.process_host_line(line)

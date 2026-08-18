@@ -234,6 +234,17 @@ class Scan(BasePlugin):
                 break
 
         if not found:
+            for cms_name in instances:
+                inst = instances[cms_name]['inst']
+                discovered_url = inst.discover_path(url, opts['timeout'],
+                        self._generate_headers(host_header))
+
+                if discovered_url:
+                    found = True
+                    url = discovered_url
+                    break
+
+        if not found:
             return None, None
         else:
             return cms_name, (url, host_header)
